@@ -1,13 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferhat ACAR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferhat's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #282c34;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #282c34;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <p>
-        Welcome
-    </p>
+  <header>
+    <h1>Ferhat's Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hi, I'm Ferhat, a passionate software engineer with expertise in .NET Core, ASP.NET Core, React, and more. I'm always eager to learn and grow in full-stack development!</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Proficient in .NET Core, ASP.NET Core, and Entity Framework</li>
+        <li>Experience with React, MongoDB, and Node.js</li>
+        <li>Knowledgeable in Agile and Scrum methodologies</li>
+        <li>Azure CI/CD processes and DevOps practices</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Personal Portfolio:</strong> A static website to showcase my skills and projects (this one!).</li>
+        <li><strong>E-Commerce Platform:</strong> Built with React and MongoDB for seamless online shopping experiences.</li>
+        <li><strong>Task Manager API:</strong> Developed using .NET Core and Entity Framework for productivity management.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ferhat. All rights reserved.</p>
+  </footer>
 </body>
 </html>
