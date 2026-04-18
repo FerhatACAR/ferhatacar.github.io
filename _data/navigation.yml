@@ -17,6 +17,10 @@ en:
   cta_secondary: "Contact"
   cta_cv: "View CV"
   language_label: "TR"
+  theme:
+    toggle: "Switch theme"
+    dark: "Dark"
+    light: "Light"
   sections:
     projects: "Selected Projects"
     profile: "Engineering Profile"
@@ -56,6 +60,10 @@ tr:
   cta_secondary: "İletişim"
   cta_cv: "CV'yi Gör"
   language_label: "EN"
+  theme:
+    toggle: "Temayı değiştir"
+    dark: "Koyu"
+    light: "Açık"
   sections:
     projects: "Seçili Projeler"
     profile: "Mühendislik Profili"

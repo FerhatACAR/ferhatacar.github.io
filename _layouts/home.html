@@ -19,13 +19,23 @@ layout: default
         <a class="button text-button" href="{% if lang == 'tr' %}{{ '/tr/cv/' | relative_url }}{% else %}{{ '/cv/' | relative_url }}{% endif %}">{{ nav.cta_cv }}</a>
       </div>
     </div>
-    <figure class="portrait">
-      <img src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt }}" width="520" height="640" loading="eager" onerror="this.closest('.portrait').classList.add('image-missing'); this.remove();">
-      <figcaption>
-        <strong>{{ profile.name }}</strong>
-        <span>{{ profile.short_role }} · {{ profile.location }}</span>
-      </figcaption>
-    </figure>
+    <div class="hero-visual" aria-label="{{ profile.name }}">
+      <div class="system-panel panel-top" aria-hidden="true">
+        <span>API</span>
+        <strong>99.9%</strong>
+      </div>
+      <figure class="portrait">
+        <img src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt }}" width="520" height="640" loading="eager" onerror="this.closest('.portrait').classList.add('image-missing'); this.remove();">
+        <figcaption>
+          <strong>{{ profile.name }}</strong>
+          <span>{{ profile.short_role }} · {{ profile.location }}</span>
+        </figcaption>
+      </figure>
+      <div class="system-panel panel-bottom" aria-hidden="true">
+        <span>BUILD</span>
+        <strong>Stable</strong>
+      </div>
+    </div>
   </div>
 </section>
 
