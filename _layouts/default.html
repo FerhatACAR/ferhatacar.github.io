@@ -1,0 +1,69 @@
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign profile = site.data.profile[lang] %}
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.en_url %}
+      <link rel="alternate" hreflang="en" href="{{ page.en_url | absolute_url }}">
+    {% endif %}
+    {% if page.tr_url %}
+      <link rel="alternate" hreflang="tr" href="{{ page.tr_url | absolute_url }}">
+    {% endif %}
+    {% if page.en_url %}
+      <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
+    {% endif %}
+    {% include structured-data.html lang=lang %}
+  </head>
+  <body>
+    <a class="skip-link" href="#content">{{ nav.skip }}</a>
+
+    <header class="site-header">
+      <div class="site-shell header-inner">
+        <a class="brand" href="{% if lang == 'tr' %}{{ '/tr/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="{{ profile.name }}">
+          <span class="brand-mark">FA</span>
+          <span>
+            <strong>{{ profile.name }}</strong>
+            <small>{{ profile.short_role }}</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          {% for item in nav.nav %}
+            <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+          {% endfor %}
+          {% assign switch_url = page.tr_url | default: "/tr/" %}
+          {% if lang == "tr" %}
+            {% assign switch_url = page.en_url | default: "/" %}
+          {% endif %}
+          <a class="language-switch" href="{{ switch_url | relative_url }}">{{ nav.language_label }}</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-grid">
+        <div>
+          <strong>{{ profile.name }}</strong>
+          <p>{{ profile.contact_summary }}</p>
+        </div>
+        <div class="footer-links">
+          {% for social in profile.socials %}
+            {% if social.url and social.url != "" %}
+              <a href="{{ social.url }}" rel="me noopener" target="_blank">{{ social.label }}</a>
+            {% endif %}
+          {% endfor %}
+          <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

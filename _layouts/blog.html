@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign posts = site.posts | where: "lang", lang %}
+
+<section class="page-hero section-band">
+  <div class="site-shell">
+    <p class="eyebrow">{{ nav.sections.blog }}</p>
+    <h1>{{ page.heading }}</h1>
+    <p class="lead">{{ page.intro }}</p>
+  </div>
+</section>
+
+<section class="section-band">
+  <div class="site-shell post-index">
+    {% if posts.size > 0 %}
+      {% for post in posts %}
+        <article class="post-row">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.description %}
+            <p>{{ post.description }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    {% else %}
+      <p class="empty-note">{{ nav.labels.no_posts }}</p>
+    {% endif %}
+  </div>
+</section>

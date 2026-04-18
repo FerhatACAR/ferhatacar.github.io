@@ -1,0 +1,86 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign profile = site.data.profile[lang] %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign skills = site.data.skills[lang] %}
+
+<section class="page-hero section-band">
+  <div class="site-shell">
+    <p class="eyebrow">{{ profile.role }}</p>
+    <h1>{{ page.heading }}</h1>
+    <p class="lead">{{ profile.profile_summary }}</p>
+    <div class="hero-actions">
+      <a class="button primary" href="mailto:{{ profile.email }}">{{ nav.cta_secondary }}</a>
+      {% if profile.cv_pdf and profile.cv_pdf != "" %}
+        <a class="button secondary" href="{{ profile.cv_pdf | relative_url }}">{{ page.download_label }}</a>
+      {% else %}
+        <span class="button disabled">{{ nav.labels.cv_empty }}</span>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section-band">
+  <div class="site-shell cv-grid">
+    <aside class="cv-aside">
+      <dl>
+        <div>
+          <dt>{{ nav.labels.email }}</dt>
+          <dd><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></dd>
+        </div>
+        <div>
+          <dt>{{ nav.labels.location }}</dt>
+          <dd>{{ profile.location }}</dd>
+        </div>
+        <div>
+          <dt>{{ nav.labels.availability }}</dt>
+          <dd>{{ profile.availability }}</dd>
+        </div>
+      </dl>
+    </aside>
+    <div class="cv-main">
+      <section>
+        <h2>{{ page.highlights_title }}</h2>
+        <ul class="highlight-list">
+          {% for item in profile.highlights %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section>
+        <h2>{{ nav.sections.skills }}</h2>
+        <div class="skill-grid condensed">
+          {% for group in skills %}
+            <section class="skill-card">
+              <h3>{{ group.group }}</h3>
+              <ul>
+                {% for item in group.items %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endfor %}
+        </div>
+      </section>
+      <section>
+        <h2>{{ nav.sections.experience }}</h2>
+        <div class="timeline">
+          {% for item in profile.experience %}
+            <article>
+              <span>{{ item.meta }}</span>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </article>
+          {% endfor %}
+          <article>
+            <span>{{ profile.education.title }}</span>
+            <h3>{{ profile.education.title }}</h3>
+            <p>{{ profile.education.description }}</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

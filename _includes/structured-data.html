@@ -1,0 +1,28 @@
+{% assign lang = include.lang | default: site.lang | default: "en" %}
+{% assign profile = site.data.profile[lang] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ profile.name | jsonify }},
+  "jobTitle": {{ profile.role | jsonify }},
+  "email": {{ profile.email | prepend: "mailto:" | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ profile.photo | absolute_url | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": {{ profile.location | jsonify }}
+  },
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "inLanguage": {{ lang | jsonify }},
+  "description": {{ site.description | jsonify }}
+}
+</script>
