@@ -1,0 +1,22 @@
+en:
+  - group: "Backend"
+    items: [".NET", "ASP.NET Core", "REST APIs", "Entity Framework", "Authentication", "Clean architecture"]
+  - group: "Frontend"
+    items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component thinking"]
+  - group: "Databases"
+    items: ["SQL", "MongoDB", "Data modeling", "Query design", "Migrations"]
+  - group: "DevOps"
+    items: ["Git", "GitHub Pages", "CI/CD basics", "Deployment hygiene", "Environment configuration"]
+  - group: "Engineering Fundamentals"
+    items: ["Algorithms", "Data structures", "System design basics", "Testing mindset", "Documentation"]
+tr:
+  - group: "Backend"
+    items: [".NET", "ASP.NET Core", "REST API", "Entity Framework", "Kimlik doğrulama", "Temiz mimari"]
+  - group: "Frontend"
+    items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component odaklı düşünme"]
+  - group: "Veritabanları"
+    items: ["SQL", "MongoDB", "Veri modelleme", "Sorgu tasarımı", "Migration"]
+  - group: "DevOps"
+    items: ["Git", "GitHub Pages", "CI/CD temelleri", "Deployment düzeni", "Ortam yapılandırması"]
+  - group: "Mühendislik Temelleri"
+    items: ["Algoritmalar", "Veri yapıları", "Sistem tasarımı temelleri", "Test bakış açısı", "Dokümantasyon"]

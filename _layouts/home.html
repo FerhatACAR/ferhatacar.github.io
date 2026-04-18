@@ -1,0 +1,196 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign profile = site.data.profile[lang] %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign projects = site.data.projects[lang] %}
+{% assign skills = site.data.skills[lang] %}
+
+<section class="hero section-band">
+  <div class="site-shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ profile.role }}</p>
+      <h1>{{ profile.hero_title }}</h1>
+      <p class="lead">{{ profile.hero_summary }}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">{{ nav.cta_primary }}</a>
+        <a class="button secondary" href="mailto:{{ profile.email }}">{{ nav.cta_secondary }}</a>
+        <a class="button text-button" href="{% if lang == 'tr' %}{{ '/tr/cv/' | relative_url }}{% else %}{{ '/cv/' | relative_url }}{% endif %}">{{ nav.cta_cv }}</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt }}" width="520" height="640" loading="eager" onerror="this.closest('.portrait').classList.add('image-missing'); this.remove();">
+      <figcaption>
+        <strong>{{ profile.name }}</strong>
+        <span>{{ profile.short_role }} · {{ profile.location }}</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section-band" id="projects">
+  <div class="site-shell">
+    <div class="section-heading">
+      <p class="eyebrow">{{ nav.sections.projects }}</p>
+      <h2>{{ nav.sections.projects }}</h2>
+    </div>
+    <div class="project-list">
+      {% for project in projects %}
+        <article class="project-card">
+          <div class="project-topline">
+            <span>{{ project.type }}</span>
+            <ul class="tech-list compact" aria-label="{{ nav.labels.technologies }}">
+              {% for tech in project.technologies limit: 3 %}
+                <li>{{ tech }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p class="project-summary">{{ project.summary }}</p>
+          <div class="case-grid">
+            <div>
+              <span>{{ nav.labels.problem }}</span>
+              <p>{{ project.problem }}</p>
+            </div>
+            <div>
+              <span>{{ nav.labels.role }}</span>
+              <p>{{ project.role }}</p>
+            </div>
+            <div>
+              <span>{{ nav.labels.outcome }}</span>
+              <p>{{ project.outcome }}</p>
+            </div>
+          </div>
+          <div class="decision-block">
+            <span>{{ nav.labels.decisions }}</span>
+            <ul>
+              {% for decision in project.decisions %}
+                <li>{{ decision }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="project-footer">
+            <ul class="tech-list" aria-label="{{ nav.labels.technologies }}">
+              {% for tech in project.technologies %}
+                <li>{{ tech }}</li>
+              {% endfor %}
+            </ul>
+            <div class="project-links">
+              {% if project.github and project.github != "" %}
+                <a href="{{ project.github }}" target="_blank" rel="noopener">{{ nav.labels.github }}</a>
+              {% endif %}
+              {% if project.live and project.live != "" %}
+                <a href="{{ project.live }}" target="_blank" rel="noopener">{{ nav.labels.live }}</a>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-band muted" id="profile">
+  <div class="site-shell split-section">
+    <div class="section-heading">
+      <p class="eyebrow">{{ nav.sections.profile }}</p>
+      <h2>{{ nav.sections.profile }}</h2>
+    </div>
+    <div class="profile-copy">
+      <p class="large-copy">{{ profile.profile_summary }}</p>
+      <ul class="highlight-list">
+        {% for item in profile.highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section-band" id="skills">
+  <div class="site-shell">
+    <div class="section-heading">
+      <p class="eyebrow">{{ nav.sections.skills }}</p>
+      <h2>{{ nav.sections.skills }}</h2>
+    </div>
+    <div class="skill-grid">
+      {% for group in skills %}
+        <section class="skill-card">
+          <h3>{{ group.group }}</h3>
+          <ul>
+            {% for item in group.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-band muted" id="experience">
+  <div class="site-shell split-section">
+    <div class="section-heading">
+      <p class="eyebrow">{{ nav.sections.experience }}</p>
+      <h2>{{ nav.sections.experience }}</h2>
+    </div>
+    <div class="timeline">
+      {% for item in profile.experience %}
+        <article>
+          <span>{{ item.meta }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+      <article>
+        <span>{{ profile.education.title }}</span>
+        <h3>{{ profile.education.title }}</h3>
+        <p>{{ profile.education.description }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-band" id="blog">
+  <div class="site-shell split-section">
+    <div class="section-heading">
+      <p class="eyebrow">{{ nav.sections.blog }}</p>
+      <h2>{{ nav.sections.blog }}</h2>
+    </div>
+    <div class="post-list">
+      {% assign posts = site.posts | where: "lang", lang %}
+      {% if posts.size > 0 %}
+        {% for post in posts limit: 3 %}
+          <article class="post-row">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}
+              <p>{{ post.description }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      {% else %}
+        <p class="empty-note">{{ nav.labels.no_posts }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section-band contact-band" id="contact">
+  <div class="site-shell contact-grid">
+    <div>
+      <p class="eyebrow">{{ nav.sections.contact }}</p>
+      <h2>{{ profile.contact_summary }}</h2>
+      <p>{{ profile.availability }}</p>
+    </div>
+    <div class="contact-list">
+      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      {% for social in profile.socials %}
+        {% if social.url and social.url != "" %}
+          <a href="{{ social.url }}" target="_blank" rel="me noopener">{{ social.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
