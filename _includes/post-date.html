@@ -1,0 +1,22 @@
+{% assign lang = include.lang | default: site.lang | default: "en" %}
+{% assign date = include.date %}
+{% if lang == "tr" %}
+  {% assign month_number = date | date: "%-m" %}
+  {% case month_number %}
+    {% when "1" %}{% assign month_name = "Ocak" %}
+    {% when "2" %}{% assign month_name = "Şubat" %}
+    {% when "3" %}{% assign month_name = "Mart" %}
+    {% when "4" %}{% assign month_name = "Nisan" %}
+    {% when "5" %}{% assign month_name = "Mayıs" %}
+    {% when "6" %}{% assign month_name = "Haziran" %}
+    {% when "7" %}{% assign month_name = "Temmuz" %}
+    {% when "8" %}{% assign month_name = "Ağustos" %}
+    {% when "9" %}{% assign month_name = "Eylül" %}
+    {% when "10" %}{% assign month_name = "Ekim" %}
+    {% when "11" %}{% assign month_name = "Kasım" %}
+    {% when "12" %}{% assign month_name = "Aralık" %}
+  {% endcase %}
+  {{ date | date: "%-d" }} {{ month_name }} {{ date | date: "%Y" }}
+{% else %}
+  {{ date | date: "%b %-d, %Y" }}
+{% endif %}

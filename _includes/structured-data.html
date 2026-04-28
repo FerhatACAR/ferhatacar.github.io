@@ -1,5 +1,31 @@
 {% assign lang = include.lang | default: site.lang | default: "en" %}
 {% assign profile = site.data.profile[lang] %}
+{% if page.layout == "post" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": {{ lang | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "image": {{ page.image | default: site.image | default: "/assets/images/og-image.png" | absolute_url | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ profile.name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ profile.name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "keywords": {{ page.keywords | default: page.tags | jsonify }}
+}
+</script>
+{% else %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,3 +52,4 @@
   "description": {{ site.description | jsonify }}
 }
 </script>
+{% endif %}

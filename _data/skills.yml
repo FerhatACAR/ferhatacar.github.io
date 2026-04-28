@@ -1,22 +1,30 @@
 en:
-  - group: "Backend"
-    items: [".NET", "ASP.NET Core", "REST APIs", "Entity Framework", "Authentication", "Clean architecture"]
+  - group: "Backend and APIs"
+    items: [".NET", "C#", "ASP.NET Core", "REST APIs", "Authentication", "Clean architecture"]
+  - group: "Data and Querying"
+    items: ["SQL", "LINQ", "Entity Framework", "ADO.NET", "PL/SQL", "Oracle"]
   - group: "Frontend"
-    items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component thinking"]
-  - group: "Databases"
-    items: ["SQL", "MongoDB", "Data modeling", "Query design", "Migrations"]
-  - group: "DevOps"
-    items: ["Git", "GitHub Pages", "CI/CD basics", "Deployment hygiene", "Environment configuration"]
-  - group: "Engineering Fundamentals"
-    items: ["Algorithms", "Data structures", "System design basics", "Testing mindset", "Documentation"]
+    items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component-driven thinking"]
+  - group: "Realtime and Integration"
+    items: ["GraphQL", "Realtime data flows", "XML", "API contracts", "Data modeling", "Performance tuning"]
+  - group: "Industrial and Device Integration"
+    items: ["S7.NET", "Siemens S7-1500", "PLC integration", "TIA Portal", "Structured memory mapping", "OT/IT connectivity"]
+  - group: "AI and Agentic Development"
+    items: ["LLM application development", "MCP", "Agentic workflows", "Prompt-driven tooling", "Developer automation", "Workflow orchestration"]
+  - group: "Engineering Foundations"
+    items: ["Algorithms", "Data structures", "Testing mindset", "Documentation", "Technical writing", "Maintainability"]
 tr:
-  - group: "Backend"
-    items: [".NET", "ASP.NET Core", "REST API", "Entity Framework", "Kimlik doğrulama", "Temiz mimari"]
+  - group: "Backend ve API"
+    items: [".NET", "C#", "ASP.NET Core", "REST API", "Kimlik doğrulama", "Temiz mimari"]
+  - group: "Veri ve Sorgulama"
+    items: ["SQL", "LINQ", "Entity Framework", "ADO.NET", "PL/SQL", "Oracle"]
   - group: "Frontend"
     items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component odaklı düşünme"]
-  - group: "Veritabanları"
-    items: ["SQL", "MongoDB", "Veri modelleme", "Sorgu tasarımı", "Migration"]
-  - group: "DevOps"
-    items: ["Git", "GitHub Pages", "CI/CD temelleri", "Deployment düzeni", "Ortam yapılandırması"]
+  - group: "Gerçek Zamanlı ve Entegrasyon"
+    items: ["GraphQL", "Gerçek zamanlı veri akışları", "XML", "API sözleşmeleri", "Veri modelleme", "Performans iyileştirme"]
+  - group: "Endüstriyel ve Cihaz Entegrasyonu"
+    items: ["S7.NET", "Siemens S7-1500", "PLC entegrasyonu", "TIA Portal", "Yapısal bellek eşleme", "OT/IT bağlantısı"]
+  - group: "AI ve Agentic Geliştirme"
+    items: ["LLM uygulama geliştirme", "MCP", "Agentic iş akışları", "Prompt odaklı araçlar", "Geliştirici otomasyonu", "İş akışı orkestrasyonu"]
   - group: "Mühendislik Temelleri"
-    items: ["Algoritmalar", "Veri yapıları", "Sistem tasarımı temelleri", "Test bakış açısı", "Dokümantasyon"]
+    items: ["Algoritmalar", "Veri yapıları", "Test bakış açısı", "Dokümantasyon", "Teknik yazım", "Bakım kolaylığı"]
