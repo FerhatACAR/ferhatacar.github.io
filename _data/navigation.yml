@@ -41,6 +41,13 @@ en:
     email: "Email"
     location: "Location"
     availability: "Availability"
+    back_to_blog: "Back to all notes"
+    published: "Published"
+    reading_time: "Reading time"
+    minutes: "min read"
+    original_post: "Originally published on DEV"
+    keywords: "Keywords"
+    recent_posts: "Recent posts"
 tr:
   skip: "İçeriğe geç"
   nav:
@@ -68,7 +75,7 @@ tr:
     projects: "Seçili Projeler"
     profile: "Mühendislik Profili"
     skills: "Teknik Araç Seti"
-    experience: "Deneyim & Eğitim"
+    experience: "Deneyim ve Eğitim"
     blog: "Teknik Notlar"
     contact: "İletişim"
   labels:
@@ -84,3 +91,10 @@ tr:
     email: "E-posta"
     location: "Konum"
     availability: "Uygunluk"
+    back_to_blog: "Tüm yazılara dön"
+    published: "Yayın tarihi"
+    reading_time: "Okuma süresi"
+    minutes: "dk okuma"
+    original_post: "İlk yayın DEV üzerinde"
+    keywords: "Anahtar konular"
+    recent_posts: "Son yazılar"

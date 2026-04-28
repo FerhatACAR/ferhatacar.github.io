@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign reading_time = content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+
+<article class="post-article">
+  <section class="page-hero section-band post-hero">
+    <div class="site-shell post-shell">
+      <a class="post-backlink" href="{% if lang == 'tr' %}{{ '/tr/blog/' | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}">{{ nav.labels.back_to_blog }}</a>
+      <p class="eyebrow">{{ nav.sections.blog }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="lead">{{ page.description }}</p>
+      {% endif %}
+      <div class="post-meta">
+        <span>
+          <strong>{{ nav.labels.published }}:</strong>
+          {% include post-date.html date=page.date lang=lang %}
+        </span>
+        <span>
+          <strong>{{ nav.labels.reading_time }}:</strong>
+          {{ reading_time }} {{ nav.labels.minutes }}
+        </span>
+      </div>
+      {% if page.keywords %}
+        <div class="post-keywords">
+          <strong>{{ nav.labels.keywords }}</strong>
+          <ul class="tech-list">
+            {% for keyword in page.keywords %}
+              <li>{{ keyword }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if page.original_url %}
+        <p class="post-source">
+          <a href="{{ page.original_url }}" target="_blank" rel="noopener">{{ nav.labels.original_post }}</a>
+        </p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="site-shell post-shell">
+      <div class="rich-text post-content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</article>
