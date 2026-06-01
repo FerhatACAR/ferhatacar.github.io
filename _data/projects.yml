@@ -12,6 +12,19 @@ en:
     technologies: ["Jekyll", "Liquid", "HTML", "CSS", "SEO"]
     github: ""
     live: "https://ferhatacar.github.io"
+  - title: "Chronicler"
+    type: "AI journaling app"
+    summary: "A Flutter-based journal app that turns two daily answers into a warm, editable first-person story."
+    problem: "Most journaling apps start from a blank page, which makes daily reflection harder to sustain."
+    role: "Designed and built the mobile app, Firebase backend, subscription flow, policy pages, and Google Play release foundation."
+    decisions:
+      - "Used Flutter and Firebase to ship a focused cross-platform journaling workflow with authentication and cloud storage."
+      - "Kept saved entries readable, editable, exportable, and deletable even when Premium access changes."
+      - "Added backend AI generation, rewarded ad regeneration, subscriptions, analytics, and public policy/support pages for launch readiness."
+    outcome: "A Play-ready mobile product foundation with daily prompts, AI story drafts, archive, sharing, reminders, account deletion, and monetization hooks."
+    technologies: ["Flutter", "Firebase", "Cloud Functions", "Firestore", "Google Play"]
+    github: "https://github.com/FerhatACAR/Chronicler"
+    live: "/chronicler/"
   - title: "Task Manager API"
     type: "Backend case study"
     summary: "An API-first productivity service focused on clean resource boundaries, validation, and predictable persistence."
@@ -52,6 +65,19 @@ tr:
     technologies: ["Jekyll", "Liquid", "HTML", "CSS", "SEO"]
     github: ""
     live: "https://ferhatacar.github.io"
+  - title: "Chronicler"
+    type: "AI günlük uygulaması"
+    summary: "İki günlük cevabı sıcak, düzenlenebilir birinci şahıs hikayesine dönüştüren Flutter tabanlı günlük uygulaması."
+    problem: "Çoğu günlük uygulaması boş sayfayla başlar; bu da günlük yazma alışkanlığını sürdürmeyi zorlaştırır."
+    role: "Mobil uygulamayı, Firebase backend akışını, abonelik temelini, politika sayfalarını ve Google Play yayın hazırlığını tasarlama ve geliştirme."
+    decisions:
+      - "Flutter ve Firebase ile kimlik doğrulama, bulut kayıt ve günlük yazma akışını tek ürün içinde topladım."
+      - "Premium durumu değişse bile kayıtlı içeriklerin okunabilir, düzenlenebilir, dışa aktarılabilir ve silinebilir kalmasını sağladım."
+      - "Yayına hazırlık için backend AI üretimi, ödüllü reklamla yeniden yazma, abonelik, analiz ve public policy/support sayfaları ekledim."
+    outcome: "Günlük sorular, AI hikaye taslakları, arşiv, paylaşım, hatırlatıcılar, hesap silme ve monetizasyon altyapısı olan Play-ready mobil ürün temeli."
+    technologies: ["Flutter", "Firebase", "Cloud Functions", "Firestore", "Google Play"]
+    github: "https://github.com/FerhatACAR/Chronicler"
+    live: "/chronicler/"
   - title: "Task Manager API"
     type: "Backend vaka çalışması"
     summary: "Temiz kaynak sınırları, doğrulama ve öngörülebilir veri akışı üzerine kurulu API odaklı üretkenlik servisi."
