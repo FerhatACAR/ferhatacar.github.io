@@ -1203,3 +1203,84 @@ p {
     transform: none;
   }
 }
+
+.chronicler-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.chronicler-product-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.chronicler-phone {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: calc(var(--radius) * 2);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 16%, transparent), transparent 42%),
+    linear-gradient(145deg, var(--surface-strong), var(--surface));
+  box-shadow: var(--shadow), var(--glow);
+}
+
+.chronicler-phone span,
+.chronicler-link-card > span {
+  color: var(--signal);
+  font-size: 0.84rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.chronicler-phone strong {
+  display: block;
+  max-width: 320px;
+  margin: 0.8rem 0;
+  color: var(--ink-strong);
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+.chronicler-phone p {
+  margin-bottom: 0;
+  color: var(--muted-strong);
+}
+
+.chronicler-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.chronicler-link-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chronicler-link-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.chronicler-link-card h3 {
+  margin-top: 0.5rem;
+}
+
+.chronicler-link-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .chronicler-hero-grid,
+  .chronicler-feature-grid,
+  .chronicler-link-list {
+    grid-template-columns: 1fr;
+  }
+
+  .chronicler-phone {
+    min-height: 320px;
+  }
+}
