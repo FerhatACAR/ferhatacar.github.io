@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign projects = site.data.projects.items %}
+{% assign matches = projects | where: "id", page.project_id %}
+{% assign project = matches.first %}
+
+{% if project %}
+  {% assign project_content = project.content[lang] | default: project.content.en %}
+  {% assign legal = project_content.legal[page.legal_type] %}
+  <section class="page-hero section-band">
+    <div class="site-shell">
+      {% if lang == "tr" %}
+        {% capture project_url %}/tr/projects/{{ project.slug }}/{% endcapture %}
+      {% else %}
+        {% capture project_url %}/projects/{{ project.slug }}/{% endcapture %}
+      {% endif %}
+      <a class="post-backlink" href="{{ project_url | relative_url }}">{{ project_content.title }}</a>
+      <p class="eyebrow">{{ project_content.type }}</p>
+      <h1>{{ legal.title | default: page.title }}</h1>
+      <p class="lead">{{ project_content.summary }}</p>
+    </div>
+  </section>
+  <section class="section-band">
+    <div class="site-shell project-legal-shell">
+      <article class="rich-text project-legal-card">
+        {% if legal and legal.body %}
+          {% for paragraph in legal.body %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        {% else %}
+          <p>{{ nav.labels.unavailable_project_body }}</p>
+        {% endif %}
+      </article>
+      {% include project-links-section.html project=project lang=lang %}
+    </div>
+  </section>
+{% else %}
+  <section class="page-hero section-band">
+    <div class="site-shell">
+      <p class="eyebrow">{{ nav.labels.unavailable_project }}</p>
+      <h1>{{ nav.labels.unavailable_project }}</h1>
+      <p class="lead">{{ nav.labels.unavailable_project_body }}</p>
+      <a class="button primary" href="{% if lang == 'tr' %}{{ '/tr/#projects' | relative_url }}{% else %}{{ '/#projects' | relative_url }}{% endif %}">{{ nav.labels.back_to_projects }}</a>
+    </div>
+  </section>
+{% endif %}

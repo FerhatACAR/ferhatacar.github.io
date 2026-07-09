@@ -1,80 +1,316 @@
-en:
-  - title: "Portfolio Platform"
-    type: "Personal product"
-    summary: "A bilingual GitHub Pages portfolio designed as a maintainable content platform rather than a one-off static page."
-    problem: "The previous site did not communicate engineering depth, technical writing, or search intent clearly enough."
-    role: "Designed the information architecture, content model, UI system, bilingual routing, and SEO foundation."
-    decisions:
-      - "Kept GitHub Pages and Jekyll for fast publishing with minimal operational overhead."
-      - "Moved reusable content into YAML so profile, projects, skills, and navigation can evolve without layout rewrites."
-      - "Built language-aware routes and metadata for English and Turkish discovery."
-    outcome: "A portfolio foundation that can scale with case studies, CV updates, and a growing technical blog."
+fallback_screenshots:
+  - src: "/assets/images/projects/placeholder-dashboard.svg"
+    alt:
+      en: "Placeholder project dashboard screenshot"
+      tr: "Yer tutucu proje paneli ekran goruntusu"
+    caption:
+      en: "Placeholder screen ready to be replaced with a real project screenshot."
+      tr: "Gercek proje ekran goruntusuyle degistirilmeye hazir yer tutucu ekran."
+  - src: "/assets/images/projects/placeholder-flow.svg"
+    alt:
+      en: "Placeholder project workflow screenshot"
+      tr: "Yer tutucu proje akis ekran goruntusu"
+    caption:
+      en: "Workflow preview placeholder."
+      tr: "Akis onizleme yer tutucusu."
+
+items:
+  - id: "portfolio-platform"
+    slug: "portfolio-platform"
+    status: "Live"
+    updated: "2026"
     technologies: ["Jekyll", "Liquid", "HTML", "CSS", "SEO"]
-    github: ""
-    live: "https://ferhatacar.github.io"
-  - title: "Task Manager API"
-    type: "Backend case study"
-    summary: "An API-first productivity service focused on clean resource boundaries, validation, and predictable persistence."
-    problem: "Task workflows need reliable state transitions, clear contracts, and data models that stay easy to evolve."
-    role: "Modeled the API surface, persistence flow, and service boundaries."
-    decisions:
-      - "Separated validation, business rules, and data access concerns."
-      - "Used explicit workflow transitions to keep application behavior understandable."
-      - "Prepared the structure for automated tests and CI-friendly delivery."
-    outcome: "A backend reference project that demonstrates practical .NET architecture and maintainable API design."
+    screenshots:
+      - src: "/assets/images/projects/placeholder-dashboard.svg"
+        alt:
+          en: "Portfolio project homepage placeholder screenshot"
+          tr: "Portfolyo projesi ana sayfa yer tutucu ekran goruntusu"
+        caption:
+          en: "Homepage and project system placeholder."
+          tr: "Ana sayfa ve proje sistemi yer tutucusu."
+      - src: "/assets/images/projects/placeholder-detail.svg"
+        alt:
+          en: "Portfolio project detail page placeholder screenshot"
+          tr: "Portfolyo proje detay sayfasi yer tutucu ekran goruntusu"
+        caption:
+          en: "Reusable detail page placeholder."
+          tr: "Yeniden kullanilabilir detay sayfasi yer tutucusu."
+    links:
+      - type: "github"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "live"
+        url: "https://ferhatacar.github.io"
+        placeholder: false
+        external: true
+      - type: "privacy"
+        route: "privacy-policy"
+        placeholder: false
+        internal: true
+      - type: "terms"
+        route: "terms"
+        placeholder: false
+        internal: true
+      - type: "support"
+        url: ""
+        placeholder: true
+        external: true
+    content:
+      en:
+        title: "Portfolio Platform"
+        type: "Personal product"
+        summary: "A bilingual GitHub Pages portfolio designed as a maintainable content platform rather than a one-off static page."
+        long_description: "This portfolio is structured as a lightweight content platform for projects, CV updates, technical writing, and bilingual search visibility. The goal is to make engineering depth easy to scan while keeping publishing simple through GitHub Pages."
+        problem: "The previous site did not communicate engineering depth, technical writing, or search intent clearly enough."
+        role: "Designed the information architecture, content model, UI system, bilingual routing, and SEO foundation."
+        decisions:
+          - "Kept GitHub Pages and Jekyll for fast publishing with minimal operational overhead."
+          - "Moved reusable content into YAML so profile, projects, skills, and navigation can evolve without layout rewrites."
+          - "Built language-aware routes and metadata for English and Turkish discovery."
+        outcome: "A portfolio foundation that can scale with case studies, CV updates, and a growing technical blog."
+        features:
+          - "Bilingual English and Turkish content"
+          - "Reusable YAML-backed project and profile sections"
+          - "SEO-ready metadata and structured routing"
+        learnings:
+          - "Static sites can stay maintainable when content and presentation are separated early."
+        future_improvements:
+          - "Replace placeholder screenshots with production project captures."
+          - "Connect richer case studies and downloadable assets."
+        legal:
+          privacy:
+            title: "Privacy Policy"
+            body:
+              - "This placeholder privacy policy explains where project-specific privacy content will live."
+              - "No real analytics, account data, or personal project data collection is described here yet."
+          terms:
+            title: "Terms of Use"
+            body:
+              - "These placeholder terms reserve a place for project-specific usage rules."
+              - "Replace this text before connecting a real public application."
+      tr:
+        title: "Portfolyo Platformu"
+        type: "Kisisel urun"
+        summary: "Tek seferlik statik sayfa yerine surdurulebilir bir icerik platformu gibi tasarlanmis iki dilli GitHub Pages portfolyosu."
+        long_description: "Bu portfolyo; projeler, CV guncellemeleri, teknik yazilar ve iki dilli gorunurluk icin hafif bir icerik platformu olarak kurgulandi. Amac, muhendislik derinligini kolay taranabilir hale getirirken GitHub Pages ile yayin surecini sade tutmak."
+        problem: "Onceki site muhendislik derinligini, teknik yazilari ve arama niyetini yeterince net gostermiyordu."
+        role: "Bilgi mimarisi, icerik modeli, arayuz sistemi, iki dilli yonlendirme ve SEO temelini tasarlama."
+        decisions:
+          - "Hizli yayin ve dusuk operasyon yuku icin GitHub Pages ve Jekyll tercih edildi."
+          - "Profil, projeler, yetenekler ve navigasyonun layout degistirmeden evrilebilmesi icin icerik YAML'a tasindi."
+          - "Ingilizce ve Turkce gorunurluk icin dil duyarli rotalar ve metadata kuruldu."
+        outcome: "Vaka calismalari, CV guncellemeleri ve buyuyen teknik blog ile olceklenebilecek bir portfolyo temeli."
+        features:
+          - "Ingilizce ve Turkce iki dilli icerik"
+          - "YAML destekli yeniden kullanilabilir proje ve profil bolumleri"
+          - "SEO uyumlu metadata ve rota yapisi"
+        learnings:
+          - "Icerik ve sunum erken ayrildiginda statik siteler de bakimi kolay kalabilir."
+        future_improvements:
+          - "Yer tutucu gorselleri gercek proje ekranlariyla degistirmek."
+          - "Daha zengin vaka calismalari ve indirilebilir dosyalar eklemek."
+        legal:
+          privacy:
+            title: "Gizlilik Politikasi"
+            body:
+              - "Bu yer tutucu gizlilik politikasi proje bazli gizlilik iceriginin nerede yer alacagini gosterir."
+              - "Henuz gercek analiz, hesap verisi veya kisisel proje verisi toplama sureci tanimlanmamistir."
+          terms:
+            title: "Kullanim Sartlari"
+            body:
+              - "Bu yer tutucu kullanim sartlari proje bazli kurallar icin ayrilmis alandir."
+              - "Gercek bir herkese acik uygulama baglanmadan once bu metin degistirilmelidir."
+
+  - id: "task-manager-api"
+    slug: "task-manager-api"
+    status: "MVP"
+    updated: "2026"
     technologies: [".NET", "ASP.NET Core", "Entity Framework", "SQL", "REST"]
-    github: ""
-    live: ""
-  - title: "E-Commerce Flow"
-    type: "Full-stack case study"
-    summary: "A product discovery and ordering flow concept connecting React UI patterns with backend data and transaction boundaries."
-    problem: "Commerce interfaces need fast discovery, clear UI state, and backend contracts that keep frontend complexity under control."
-    role: "Planned user flows, component structure, API needs, and ownership boundaries."
-    decisions:
-      - "Separated catalog, basket, and order concerns to avoid tightly coupled state."
-      - "Kept reusable UI sections focused on decision support rather than decoration."
-      - "Defined extension points for authentication, payments, and order history."
-    outcome: "A full-stack case study ready to be connected to a repository, demo, and richer product narrative."
+    screenshots: []
+    links:
+      - type: "github"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "live"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "privacy"
+        route: "privacy-policy"
+        placeholder: false
+        internal: true
+      - type: "terms"
+        route: "terms"
+        placeholder: false
+        internal: true
+      - type: "support"
+        url: ""
+        placeholder: true
+        external: true
+    content:
+      en:
+        title: "Task Manager API"
+        type: "Backend case study"
+        summary: "An API-first productivity service focused on clean resource boundaries, validation, and predictable persistence."
+        long_description: "Task Manager API is a backend case study for organizing productivity workflows around explicit contracts, validation, and clear state transitions. The dummy detail content is ready to be replaced with repository, endpoint, and deployment information."
+        problem: "Task workflows need reliable state transitions, clear contracts, and data models that stay easy to evolve."
+        role: "Modeled the API surface, persistence flow, and service boundaries."
+        decisions:
+          - "Separated validation, business rules, and data access concerns."
+          - "Used explicit workflow transitions to keep application behavior understandable."
+          - "Prepared the structure for automated tests and CI-friendly delivery."
+        outcome: "A backend reference project that demonstrates practical .NET architecture and maintainable API design."
+        features:
+          - "Task and workflow resource modeling"
+          - "Validation-oriented API boundaries"
+          - "Persistence structure prepared for automated testing"
+        learnings:
+          - "Explicit transitions make backend behavior easier to document and test."
+        future_improvements:
+          - "Add OpenAPI documentation and a hosted demo."
+          - "Publish repository and CI status links."
+        legal:
+          privacy:
+            title: "Privacy Policy"
+            body:
+              - "This placeholder policy is prepared for a future Task Manager API deployment."
+              - "Replace it with real data handling details before collecting user information."
+          terms:
+            title: "Terms of Use"
+            body:
+              - "These placeholder terms are prepared for future API usage rules."
+              - "Replace them before offering a public service or demo."
+      tr:
+        title: "Task Manager API"
+        type: "Backend vaka calismasi"
+        summary: "Temiz kaynak sinirlari, dogrulama ve ongorulebilir veri akisi uzerine kurulu API odakli uretkenlik servisi."
+        long_description: "Task Manager API; acik sozlesmeler, dogrulama ve net durum gecisleri etrafinda uretkenlik akislarini modelleyen bir backend vaka calismasidir. Yer tutucu detay icerigi daha sonra repo, endpoint ve yayin bilgileriyle degistirilebilir."
+        problem: "Gorev akislari guvenilir durum gecislerine, net sozlesmelere ve kolay evrilen veri modellerine ihtiyac duyar."
+        role: "API yuzeyi, kalicilik akisi ve servis sinirlarini modelleme."
+        decisions:
+          - "Dogrulama, is kurallari ve veri erisimi sorumluluklari ayrildi."
+          - "Uygulama davranisini anlasilir tutmak icin acik is akisi gecisleri kullanildi."
+          - "Otomatik testler ve CI uyumlu teslim icin yapi hazirlandi."
+        outcome: "Pratik .NET mimarisini ve surdurulebilir API tasarimini gosteren bir backend referans projesi."
+        features:
+          - "Gorev ve akis kaynak modellemesi"
+          - "Dogrulama odakli API sinirlari"
+          - "Otomatik testlere hazir kalicilik yapisi"
+        learnings:
+          - "Acik gecisler backend davranisini belgelemeyi ve test etmeyi kolaylastirir."
+        future_improvements:
+          - "OpenAPI dokumantasyonu ve yayindaki demo eklemek."
+          - "Repo ve CI durumu baglantilarini yayinlamak."
+        legal:
+          privacy:
+            title: "Gizlilik Politikasi"
+            body:
+              - "Bu yer tutucu politika gelecekteki Task Manager API yayini icin hazirlandi."
+              - "Kullanici bilgisi toplanmadan once gercek veri isleme detaylariyla degistirilmelidir."
+          terms:
+            title: "Kullanim Sartlari"
+            body:
+              - "Bu yer tutucu sartlar gelecekteki API kullanim kurallari icin hazirlandi."
+              - "Herkese acik servis veya demo sunmadan once degistirilmelidir."
+
+  - id: "e-commerce-flow"
+    slug: "e-commerce-flow"
+    status: "Concept"
+    updated: "2026"
     technologies: ["React", "Node.js", "MongoDB", "API Design", "UX Flow"]
-    github: ""
-    live: ""
-tr:
-  - title: "Portfolyo Platformu"
-    type: "Kişisel ürün"
-    summary: "Tek seferlik statik sayfa yerine sürdürülebilir bir içerik platformu gibi tasarlanmış iki dilli GitHub Pages portfolyosu."
-    problem: "Önceki site mühendislik derinliğini, teknik yazıları ve arama niyetini yeterince net göstermiyordu."
-    role: "Bilgi mimarisi, içerik modeli, arayüz sistemi, iki dilli yönlendirme ve SEO temelini tasarlama."
-    decisions:
-      - "Hızlı yayın ve düşük operasyon yükü için GitHub Pages ve Jekyll tercih edildi."
-      - "Profil, projeler, yetenekler ve navigasyonun layout değiştirmeden evrilebilmesi için içerik YAML'a taşındı."
-      - "İngilizce ve Türkçe görünürlük için dil duyarlı rotalar ve metadata kuruldu."
-    outcome: "Case study'ler, CV güncellemeleri ve büyüyen teknik blog ile ölçeklenebilecek bir portfolyo temeli."
-    technologies: ["Jekyll", "Liquid", "HTML", "CSS", "SEO"]
-    github: ""
-    live: "https://ferhatacar.github.io"
-  - title: "Task Manager API"
-    type: "Backend vaka çalışması"
-    summary: "Temiz kaynak sınırları, doğrulama ve öngörülebilir veri akışı üzerine kurulu API odaklı üretkenlik servisi."
-    problem: "Görev akışları güvenilir durum geçişlerine, net sözleşmelere ve kolay evrilen veri modellerine ihtiyaç duyar."
-    role: "API yüzeyi, kalıcılık akışı ve servis sınırlarını modelleme."
-    decisions:
-      - "Doğrulama, iş kuralları ve veri erişimi sorumlulukları ayrıldı."
-      - "Uygulama davranışını anlaşılır tutmak için açık iş akışı geçişleri kullanıldı."
-      - "Otomatik testler ve CI uyumlu teslim için yapı hazırlandı."
-    outcome: "Pratik .NET mimarisini ve sürdürülebilir API tasarımını gösteren bir backend referans projesi."
-    technologies: [".NET", "ASP.NET Core", "Entity Framework", "SQL", "REST"]
-    github: ""
-    live: ""
-  - title: "E-Ticaret Akışı"
-    type: "Full-stack vaka çalışması"
-    summary: "React arayüz kalıplarını backend veri ve işlem sınırlarıyla bağlayan ürün keşfi ve sipariş akışı konsepti."
-    problem: "E-ticaret arayüzleri hızlı keşif, net UI state yönetimi ve frontend karmaşıklığını kontrol altında tutan backend sözleşmeleri ister."
-    role: "Kullanıcı akışları, component yapısı, API ihtiyaçları ve sahiplik sınırlarını planlama."
-    decisions:
-      - "Catalog, sepet ve sipariş sorumlulukları ayrılarak sıkı bağlı state yapısı önlendi."
-      - "Yeniden kullanılabilir arayüz bölümleri dekorasyon yerine karar desteğine odaklandı."
-      - "Kimlik doğrulama, ödeme ve sipariş geçmişi için genişleme noktaları tanımlandı."
-    outcome: "Repo, demo ve daha zengin ürün anlatımıyla güçlendirilmeye hazır bir full-stack vaka çalışması."
-    technologies: ["React", "Node.js", "MongoDB", "API Design", "UX Flow"]
-    github: ""
-    live: ""
+    screenshots:
+      - src: "/assets/images/projects/placeholder-flow.svg"
+        alt:
+          en: "E-commerce flow placeholder screenshot"
+          tr: "E-ticaret akisi yer tutucu ekran goruntusu"
+        caption:
+          en: "Product discovery and order flow placeholder."
+          tr: "Urun kesfi ve siparis akisi yer tutucusu."
+    links:
+      - type: "github"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "live"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "privacy"
+        route: "privacy-policy"
+        placeholder: false
+        internal: true
+      - type: "terms"
+        route: "terms"
+        placeholder: false
+        internal: true
+      - type: "support"
+        url: ""
+        placeholder: true
+        external: true
+    content:
+      en:
+        title: "E-Commerce Flow"
+        type: "Full-stack case study"
+        summary: "A product discovery and ordering flow concept connecting React UI patterns with backend data and transaction boundaries."
+        long_description: "E-Commerce Flow explores how catalog browsing, basket decisions, and order boundaries can be presented as a coherent full-stack product flow. The current content is dummy detail data that can later become a full case study."
+        problem: "Commerce interfaces need fast discovery, clear UI state, and backend contracts that keep frontend complexity under control."
+        role: "Planned user flows, component structure, API needs, and ownership boundaries."
+        decisions:
+          - "Separated catalog, basket, and order concerns to avoid tightly coupled state."
+          - "Kept reusable UI sections focused on decision support rather than decoration."
+          - "Defined extension points for authentication, payments, and order history."
+        outcome: "A full-stack case study ready to be connected to a repository, demo, and richer product narrative."
+        features:
+          - "Catalog, basket, and order flow separation"
+          - "Frontend state mapped to backend ownership boundaries"
+          - "Room for authentication, payment, and order history extensions"
+        learnings:
+          - "Commerce UI stays calmer when backend contracts are explicit."
+        future_improvements:
+          - "Add interactive prototype screenshots."
+          - "Connect a live demo and repository."
+        legal:
+          privacy:
+            title: "Privacy Policy"
+            body:
+              - "This placeholder privacy policy is prepared for a future commerce demo."
+              - "Replace this content with real data, checkout, and account handling information."
+          terms:
+            title: "Terms of Use"
+            body:
+              - "These placeholder terms are prepared for future commerce demo usage."
+              - "Replace this content before enabling real transactions or user accounts."
+      tr:
+        title: "E-Ticaret Akisi"
+        type: "Full-stack vaka calismasi"
+        summary: "React arayuz kaliplarini backend veri ve islem sinirlariyla baglayan urun kesfi ve siparis akisi konsepti."
+        long_description: "E-Ticaret Akisi; katalog gezme, sepet kararlari ve siparis sinirlarinin tutarli bir full-stack urun akisi olarak nasil sunulabilecegini inceler. Mevcut icerik daha sonra tam bir vaka calismasina donusebilecek dummy detay verisidir."
+        problem: "E-ticaret arayuzleri hizli kesif, net UI state yonetimi ve frontend karmasikligini kontrol altinda tutan backend sozlesmeleri ister."
+        role: "Kullanici akislari, component yapisi, API ihtiyaclari ve sahiplik sinirlarini planlama."
+        decisions:
+          - "Catalog, sepet ve siparis sorumluluklari ayrilarak siki bagli state yapisi onlendi."
+          - "Yeniden kullanilabilir arayuz bolumleri dekorasyon yerine karar destegine odaklandi."
+          - "Kimlik dogrulama, odeme ve siparis gecmisi icin genisleme noktalari tanimlandi."
+        outcome: "Repo, demo ve daha zengin urun anlatimiyla guclendirilmeye hazir bir full-stack vaka calismasi."
+        features:
+          - "Katalog, sepet ve siparis akis ayrimi"
+          - "Frontend state yapisinin backend sahiplik sinirlarina baglanmasi"
+          - "Kimlik, odeme ve siparis gecmisi icin genisleme alani"
+        learnings:
+          - "Backend sozlesmeleri acik oldugunda e-ticaret arayuzu daha sakin kalir."
+        future_improvements:
+          - "Etkilesimli prototip ekran goruntuleri eklemek."
+          - "Canli demo ve repo baglantisi eklemek."
+        legal:
+          privacy:
+            title: "Gizlilik Politikasi"
+            body:
+              - "Bu yer tutucu gizlilik politikasi gelecekteki e-ticaret demosu icin hazirlandi."
+              - "Gercek veri, odeme ve hesap isleme bilgileriyle degistirilmelidir."
+          terms:
+            title: "Kullanim Sartlari"
+            body:
+              - "Bu yer tutucu sartlar gelecekteki e-ticaret demosu kullanimi icin hazirlandi."
+              - "Gercek islem veya kullanici hesabi acilmadan once degistirilmelidir."

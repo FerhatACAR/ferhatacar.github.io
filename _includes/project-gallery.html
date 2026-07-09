@@ -1,0 +1,28 @@
+{% assign lang = include.lang | default: page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign project = include.project %}
+{% assign screenshots = project.screenshots %}
+{% if screenshots == nil or screenshots.size == 0 %}
+  {% assign screenshots = site.data.projects.fallback_screenshots %}
+{% endif %}
+
+<section class="project-section" aria-labelledby="project-gallery-title">
+  <div class="project-section-heading">
+    <p class="eyebrow">{{ nav.labels.screenshots }}</p>
+    <h2 id="project-gallery-title">{{ nav.labels.screenshots }}</h2>
+  </div>
+  <div class="project-gallery" data-project-gallery>
+    <div class="gallery-controls">
+      <button class="gallery-button" type="button" data-gallery-prev aria-label="{{ nav.labels.previous_image }}">&lsaquo;</button>
+      <button class="gallery-button" type="button" data-gallery-next aria-label="{{ nav.labels.next_image }}">&rsaquo;</button>
+    </div>
+    <div class="gallery-track" tabindex="0">
+      {% for screenshot in screenshots %}
+        <figure class="gallery-item">
+          <img src="{{ screenshot.src | relative_url }}" alt="{{ screenshot.alt[lang] | default: screenshot.alt.en }}" loading="lazy">
+          <figcaption>{{ screenshot.caption[lang] | default: screenshot.caption.en }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

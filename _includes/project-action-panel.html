@@ -1,0 +1,18 @@
+{% assign lang = include.lang | default: page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign project = include.project %}
+
+<aside class="project-action-panel">
+  <h2>{{ nav.labels.project_actions }}</h2>
+  <dl>
+    <div>
+      <dt>{{ nav.labels.status }}</dt>
+      <dd>{{ project.status }}</dd>
+    </div>
+    <div>
+      <dt>{{ nav.labels.last_updated }}</dt>
+      <dd>{{ project.updated }}</dd>
+    </div>
+  </dl>
+  {% include project-cta-buttons.html project=project lang=lang %}
+</aside>

@@ -1,0 +1,11 @@
+{% assign lang = include.lang | default: page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign project = include.project %}
+
+<section class="project-section" aria-labelledby="project-links-title">
+  <div class="project-section-heading">
+    <p class="eyebrow">{{ nav.labels.project_actions }}</p>
+    <h2 id="project-links-title">{{ nav.labels.project_actions }}</h2>
+  </div>
+  {% include project-cta-buttons.html project=project lang=lang %}
+</section>

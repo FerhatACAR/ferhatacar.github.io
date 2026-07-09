@@ -1,0 +1,15 @@
+{% assign lang = include.lang | default: page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign project = include.project %}
+
+<section class="project-section" aria-labelledby="project-tech-title">
+  <div class="project-section-heading">
+    <p class="eyebrow">{{ nav.labels.technologies }}</p>
+    <h2 id="project-tech-title">{{ nav.labels.technologies }}</h2>
+  </div>
+  <ul class="tech-list project-tech-list" aria-label="{{ nav.labels.technologies }}">
+    {% for tech in project.technologies %}
+      <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+</section>

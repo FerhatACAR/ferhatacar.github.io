@@ -42,8 +42,35 @@
     });
   }
 
+  document.querySelectorAll("[data-project-gallery]").forEach(function (gallery) {
+    var track = gallery.querySelector(".gallery-track");
+    var previous = gallery.querySelector("[data-gallery-prev]");
+    var next = gallery.querySelector("[data-gallery-next]");
+
+    function move(direction) {
+      if (!track) {
+        return;
+      }
+
+      var amount = Math.max(track.clientWidth * 0.82, 260);
+      track.scrollBy({ left: amount * direction, behavior: "smooth" });
+    }
+
+    if (previous) {
+      previous.addEventListener("click", function () {
+        move(-1);
+      });
+    }
+
+    if (next) {
+      next.addEventListener("click", function () {
+        move(1);
+      });
+    }
+  });
+
   var revealTargets = document.querySelectorAll(
-    ".section-band, .project-card, .skill-card, .timeline article, .post-row, .cv-aside, .contact-list a"
+    ".section-band, .project-card, .skill-card, .timeline article, .post-row, .cv-aside, .contact-list a, .project-action-panel, .gallery-item, .project-section"
   );
 
   revealTargets.forEach(function (item) {

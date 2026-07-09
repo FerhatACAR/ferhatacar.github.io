@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">Project dashboard placeholder</title>
+  <desc id="desc">A geometric placeholder dashboard image for project screenshots.</desc>
+  <rect width="1280" height="800" fill="#0f1412"/>
+  <rect x="80" y="72" width="1120" height="656" rx="18" fill="#151c19" stroke="#2d4d48" stroke-width="2"/>
+  <rect x="128" y="122" width="280" height="40" rx="8" fill="#23b8a6"/>
+  <rect x="128" y="198" width="1024" height="120" rx="12" fill="#1b2420" stroke="#345a54"/>
+  <rect x="128" y="354" width="312" height="246" rx="12" fill="#1b2420" stroke="#345a54"/>
+  <rect x="484" y="354" width="312" height="246" rx="12" fill="#1b2420" stroke="#345a54"/>
+  <rect x="840" y="354" width="312" height="246" rx="12" fill="#1b2420" stroke="#345a54"/>
+  <circle cx="1020" cy="148" r="28" fill="#df5264"/>
+  <path d="M168 266h220M168 430h180M524 430h190M880 430h160M168 482h130M524 482h140M880 482h210" stroke="#a5b3ad" stroke-width="18" stroke-linecap="round" opacity=".55"/>
+</svg>

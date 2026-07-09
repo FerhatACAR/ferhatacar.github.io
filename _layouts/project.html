@@ -1,0 +1,110 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign projects = site.data.projects.items %}
+{% assign matches = projects | where: "id", page.project_id %}
+{% assign project = matches.first %}
+
+{% if project %}
+  {% assign project_content = project.content[lang] | default: project.content.en %}
+  <section class="page-hero section-band project-hero">
+    <div class="site-shell project-hero-grid">
+      <div>
+        <a class="post-backlink" href="{% if lang == 'tr' %}{{ '/tr/#projects' | relative_url }}{% else %}{{ '/#projects' | relative_url }}{% endif %}">{{ nav.labels.back_to_projects }}</a>
+        <p class="eyebrow">{{ project_content.type }} · {{ project.status }}</p>
+        <h1>{{ project_content.title }}</h1>
+        <p class="lead">{{ project_content.summary }}</p>
+        {% include project-cta-buttons.html project=project lang=lang %}
+      </div>
+      {% include project-action-panel.html project=project lang=lang %}
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="site-shell project-detail-grid">
+      <div class="project-main-flow">
+        {% include project-gallery.html project=project lang=lang %}
+
+        <section class="project-section" aria-labelledby="project-about-title">
+          <div class="project-section-heading">
+            <p class="eyebrow">{{ nav.labels.about_project }}</p>
+            <h2 id="project-about-title">{{ nav.labels.about_project }}</h2>
+          </div>
+          <p class="large-copy">{{ project_content.long_description }}</p>
+          <div class="case-grid project-case-grid">
+            <div>
+              <span>{{ nav.labels.problem }}</span>
+              <p>{{ project_content.problem }}</p>
+            </div>
+            <div>
+              <span>{{ nav.labels.role }}</span>
+              <p>{{ project_content.role }}</p>
+            </div>
+            <div>
+              <span>{{ nav.labels.outcome }}</span>
+              <p>{{ project_content.outcome }}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section" aria-labelledby="project-features-title">
+          <div class="project-section-heading">
+            <p class="eyebrow">{{ nav.labels.key_features }}</p>
+            <h2 id="project-features-title">{{ nav.labels.key_features }}</h2>
+          </div>
+          <ul class="highlight-list project-list-block">
+            {% for item in project_content.features %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="project-section" aria-labelledby="project-decisions-title">
+          <div class="project-section-heading">
+            <p class="eyebrow">{{ nav.labels.decisions }}</p>
+            <h2 id="project-decisions-title">{{ nav.labels.decisions }}</h2>
+          </div>
+          <ul class="highlight-list project-list-block">
+            {% for item in project_content.decisions %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        {% include project-tech-stack.html project=project lang=lang %}
+
+        <section class="project-section project-two-column">
+          <div>
+            <h2>{{ nav.labels.learnings }}</h2>
+            <ul class="highlight-list project-list-block">
+              {% for item in project_content.learnings %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h2>{{ nav.labels.future_improvements }}</h2>
+            <ul class="highlight-list project-list-block">
+              {% for item in project_content.future_improvements %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        {% include project-links-section.html project=project lang=lang %}
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="page-hero section-band">
+    <div class="site-shell">
+      <p class="eyebrow">{{ nav.labels.unavailable_project }}</p>
+      <h1>{{ nav.labels.unavailable_project }}</h1>
+      <p class="lead">{{ nav.labels.unavailable_project_body }}</p>
+      <a class="button primary" href="{% if lang == 'tr' %}{{ '/tr/#projects' | relative_url }}{% else %}{{ '/#projects' | relative_url }}{% endif %}">{{ nav.labels.back_to_projects }}</a>
+    </div>
+  </section>
+{% endif %}

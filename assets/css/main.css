@@ -383,6 +383,11 @@ p {
   background: var(--surface-soft);
 }
 
+.compact-button {
+  min-height: 40px;
+  padding: 0.52rem 0.78rem;
+}
+
 .hero-visual {
   position: relative;
   min-height: 580px;
@@ -1001,6 +1006,182 @@ p {
   gap: 0;
 }
 
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+.project-detail-grid,
+.project-main-flow {
+  display: grid;
+  gap: 3rem;
+}
+
+.project-section {
+  min-width: 0;
+}
+
+.project-section-heading {
+  max-width: 680px;
+  margin-bottom: 1.35rem;
+}
+
+.project-case-grid {
+  margin-bottom: 0;
+}
+
+.project-list-block {
+  max-width: 820px;
+}
+
+.project-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-two-column > div,
+.project-legal-card,
+.project-action-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 6%, transparent), transparent 44%),
+    var(--surface);
+}
+
+.project-two-column > div,
+.project-legal-card {
+  padding: 1.4rem;
+}
+
+.project-action-panel {
+  position: sticky;
+  top: calc(var(--header-height) + 22px);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.project-action-panel h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.project-action-panel dl,
+.project-action-panel dd {
+  margin: 0;
+}
+
+.project-action-panel div + div {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-action-panel dt {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.project-action-panel dd {
+  color: var(--muted-strong);
+}
+
+.project-action-panel .project-cta-row {
+  display: grid;
+}
+
+.project-tech-list {
+  max-width: 820px;
+}
+
+.project-gallery {
+  position: relative;
+}
+
+.gallery-track {
+  display: grid;
+  grid-auto-columns: minmax(280px, 78%);
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  padding-bottom: 0.4rem;
+}
+
+.gallery-track:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.gallery-item {
+  scroll-snap-align: start;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--surface-strong);
+}
+
+.gallery-item figcaption {
+  padding: 0.85rem 1rem;
+  color: var(--muted);
+}
+
+.gallery-controls {
+  position: absolute;
+  top: -3.4rem;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gallery-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-strong);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: border-color 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.gallery-button:hover,
+.gallery-button:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.project-legal-shell {
+  display: grid;
+  gap: 3rem;
+}
+
 .site-footer {
   padding: 2rem 0;
   background: var(--paper);
@@ -1069,7 +1250,9 @@ p {
   .hero-grid,
   .split-section,
   .contact-grid,
-  .cv-grid {
+  .cv-grid,
+  .project-hero-grid,
+  .project-two-column {
     grid-template-columns: 1fr;
   }
 
@@ -1092,6 +1275,10 @@ p {
   }
 
   .cv-aside {
+    position: static;
+  }
+
+  .project-action-panel {
     position: static;
   }
 }
@@ -1172,6 +1359,25 @@ p {
   .footer-grid {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .project-cta-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .project-cta-row .button {
+    width: 100%;
+  }
+
+  .gallery-controls {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+  }
+
+  .gallery-track {
+    grid-auto-columns: minmax(260px, 92%);
   }
 
   .tech-list.compact {
