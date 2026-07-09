@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">Project workflow placeholder</title>
+  <desc id="desc">A workflow placeholder image for project screenshots.</desc>
+  <rect width="1280" height="800" fill="#0f1412"/>
+  <path d="M180 400h920" stroke="#31524d" stroke-width="8" stroke-linecap="round"/>
+  <rect x="100" y="244" width="240" height="312" rx="18" fill="#151c19" stroke="#23b8a6" stroke-width="3"/>
+  <rect x="520" y="244" width="240" height="312" rx="18" fill="#151c19" stroke="#23b8a6" stroke-width="3"/>
+  <rect x="940" y="244" width="240" height="312" rx="18" fill="#151c19" stroke="#23b8a6" stroke-width="3"/>
+  <circle cx="430" cy="400" r="26" fill="#df5264"/>
+  <circle cx="850" cy="400" r="26" fill="#df5264"/>
+  <path d="M150 326h140M150 390h118M150 454h156M570 326h140M570 390h118M570 454h156M990 326h140M990 390h118M990 454h156" stroke="#c8d2cd" stroke-width="18" stroke-linecap="round" opacity=".55"/>
+</svg>

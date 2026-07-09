@@ -4,7 +4,7 @@ layout: default
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign profile = site.data.profile[lang] %}
 {% assign nav = site.data.navigation[lang] %}
-{% assign projects = site.data.projects[lang] %}
+{% assign projects = site.data.projects.items %}
 {% assign skills = site.data.skills[lang] %}
 
 <section class="hero section-band">
@@ -47,35 +47,41 @@ layout: default
     </div>
     <div class="project-list">
       {% for project in projects %}
+        {% assign project_content = project.content[lang] %}
+        {% if lang == "tr" %}
+          {% capture project_url %}/tr/projects/{{ project.slug }}/{% endcapture %}
+        {% else %}
+          {% capture project_url %}/projects/{{ project.slug }}/{% endcapture %}
+        {% endif %}
         <article class="project-card">
           <div class="project-topline">
-            <span>{{ project.type }}</span>
+            <span>{{ project_content.type }}</span>
             <ul class="tech-list compact" aria-label="{{ nav.labels.technologies }}">
               {% for tech in project.technologies limit: 3 %}
                 <li>{{ tech }}</li>
               {% endfor %}
             </ul>
           </div>
-          <h3>{{ project.title }}</h3>
-          <p class="project-summary">{{ project.summary }}</p>
+          <h3>{{ project_content.title }}</h3>
+          <p class="project-summary">{{ project_content.summary }}</p>
           <div class="case-grid">
             <div>
               <span>{{ nav.labels.problem }}</span>
-              <p>{{ project.problem }}</p>
+              <p>{{ project_content.problem }}</p>
             </div>
             <div>
               <span>{{ nav.labels.role }}</span>
-              <p>{{ project.role }}</p>
+              <p>{{ project_content.role }}</p>
             </div>
             <div>
               <span>{{ nav.labels.outcome }}</span>
-              <p>{{ project.outcome }}</p>
+              <p>{{ project_content.outcome }}</p>
             </div>
           </div>
           <div class="decision-block">
             <span>{{ nav.labels.decisions }}</span>
             <ul>
-              {% for decision in project.decisions %}
+              {% for decision in project_content.decisions %}
                 <li>{{ decision }}</li>
               {% endfor %}
             </ul>
@@ -87,12 +93,7 @@ layout: default
               {% endfor %}
             </ul>
             <div class="project-links">
-              {% if project.github and project.github != "" %}
-                <a href="{{ project.github }}" target="_blank" rel="noopener">{{ nav.labels.github }}</a>
-              {% endif %}
-              {% if project.live and project.live != "" %}
-                <a href="{{ project.live }}" target="_blank" rel="noopener">{{ nav.labels.live }}</a>
-              {% endif %}
+              <a class="button secondary compact-button" href="{{ project_url | relative_url }}">{{ nav.labels.view_project }}</a>
             </div>
           </div>
         </article>

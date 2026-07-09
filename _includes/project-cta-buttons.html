@@ -1,0 +1,35 @@
+{% assign lang = include.lang | default: page.lang | default: site.lang | default: "en" %}
+{% assign nav = site.data.navigation[lang] %}
+{% assign project = include.project %}
+{% assign project_content = project.content[lang] %}
+{% assign profile = site.data.profile[lang] %}
+
+<div class="project-cta-row">
+  {% for link in project.links %}
+    {% assign label = nav.labels[link.type] | default: link.type %}
+    {% assign is_disabled = false %}
+    {% if link.placeholder or link.url == "" or link.url == nil %}
+      {% unless link.internal or link.type == "contact" %}
+        {% assign is_disabled = true %}
+      {% endunless %}
+    {% endif %}
+
+    {% if link.type == "contact" %}
+      <a class="button secondary" href="mailto:{{ profile.email }}">{{ nav.labels.contact_project }}</a>
+    {% elsif is_disabled %}
+      <span class="button disabled" aria-disabled="true">{{ label }} - {{ nav.labels.placeholder_link }}</span>
+    {% elsif link.internal %}
+      {% if lang == "tr" %}
+        {% capture internal_url %}/tr/projects/{{ project.slug }}/{{ link.route }}/{% endcapture %}
+      {% else %}
+        {% capture internal_url %}/projects/{{ project.slug }}/{{ link.route }}/{% endcapture %}
+      {% endif %}
+      <a class="button secondary" href="{{ internal_url | relative_url }}">{{ label }}</a>
+    {% elsif link.external %}
+      <a class="button secondary" href="{{ link.url }}" target="_blank" rel="noopener">{{ label }}</a>
+    {% else %}
+      <a class="button secondary" href="{{ link.url | relative_url }}">{{ label }}</a>
+    {% endif %}
+  {% endfor %}
+  <a class="button text-button" href="{% if lang == 'tr' %}{{ '/tr/#contact' | relative_url }}{% else %}{{ '/#contact' | relative_url }}{% endif %}">{{ nav.labels.contact_project }}</a>
+</div>
