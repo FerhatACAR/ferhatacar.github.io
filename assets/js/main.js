@@ -46,14 +46,83 @@
     var track = gallery.querySelector(".gallery-track");
     var previous = gallery.querySelector("[data-gallery-prev]");
     var next = gallery.querySelector("[data-gallery-next]");
+    var openers = Array.prototype.slice.call(gallery.querySelectorAll("[data-gallery-open]"));
+    var dialog = gallery.querySelector("[data-gallery-dialog]");
+    var lightboxImage = gallery.querySelector("[data-gallery-lightbox-image]");
+    var lightboxCaption = gallery.querySelector("[data-gallery-lightbox-caption]");
+    var lightboxCounter = gallery.querySelector("[data-gallery-counter]");
+    var lightboxPrevious = gallery.querySelector("[data-lightbox-prev]");
+    var lightboxNext = gallery.querySelector("[data-lightbox-next]");
+    var lightboxClose = gallery.querySelector("[data-gallery-close]");
+    var activeIndex = 0;
+    var lastTrigger = null;
+    var closeTimer = null;
 
     function move(direction) {
       if (!track) {
         return;
       }
 
-      var amount = Math.max(track.clientWidth * 0.82, 260);
-      track.scrollBy({ left: amount * direction, behavior: "smooth" });
+      var firstItem = track.querySelector(".gallery-item");
+      var gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+      var amount = firstItem ? firstItem.getBoundingClientRect().width + gap : Math.max(track.clientWidth * 0.82, 260);
+      track.scrollBy({ left: amount * direction, behavior: reduceMotion.matches ? "auto" : "smooth" });
+    }
+
+    function renderLightbox(index) {
+      if (!openers.length || !lightboxImage) {
+        return;
+      }
+
+      activeIndex = (index + openers.length) % openers.length;
+      var figure = openers[activeIndex].closest(".gallery-item");
+      var sourceImage = openers[activeIndex].querySelector("img");
+      var caption = figure ? figure.querySelector("figcaption") : null;
+
+      lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+      lightboxImage.alt = sourceImage.alt;
+
+      if (lightboxCaption) {
+        lightboxCaption.textContent = caption ? caption.textContent : "";
+      }
+
+      if (lightboxCounter) {
+        lightboxCounter.textContent = activeIndex + 1 + " / " + openers.length;
+      }
+    }
+
+    function finishClosing() {
+      if (dialog && dialog.open) {
+        dialog.close();
+      }
+    }
+
+    function closeLightbox() {
+      if (!dialog || !dialog.open) {
+        return;
+      }
+
+      window.clearTimeout(closeTimer);
+      dialog.classList.remove("is-open");
+      closeTimer = window.setTimeout(finishClosing, reduceMotion.matches ? 0 : 180);
+    }
+
+    function openLightbox(index, trigger) {
+      if (!dialog) {
+        return;
+      }
+
+      window.clearTimeout(closeTimer);
+      lastTrigger = trigger;
+      renderLightbox(index);
+      dialog.showModal();
+      document.body.classList.add("gallery-lightbox-open");
+      window.requestAnimationFrame(function () {
+        dialog.classList.add("is-open");
+        if (lightboxClose) {
+          lightboxClose.focus();
+        }
+      });
     }
 
     if (previous) {
@@ -65,6 +134,59 @@
     if (next) {
       next.addEventListener("click", function () {
         move(1);
+      });
+    }
+
+    openers.forEach(function (opener, index) {
+      opener.addEventListener("click", function () {
+        openLightbox(index, opener);
+      });
+    });
+
+    if (lightboxPrevious) {
+      lightboxPrevious.addEventListener("click", function () {
+        renderLightbox(activeIndex - 1);
+      });
+    }
+
+    if (lightboxNext) {
+      lightboxNext.addEventListener("click", function () {
+        renderLightbox(activeIndex + 1);
+      });
+    }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (dialog) {
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) {
+          closeLightbox();
+        }
+      });
+
+      dialog.addEventListener("cancel", function (event) {
+        event.preventDefault();
+        closeLightbox();
+      });
+
+      dialog.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          renderLightbox(activeIndex - 1);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          renderLightbox(activeIndex + 1);
+        }
+      });
+
+      dialog.addEventListener("close", function () {
+        dialog.classList.remove("is-open");
+        document.body.classList.remove("gallery-lightbox-open");
+        if (lastTrigger) {
+          lastTrigger.focus();
+        }
       });
     }
   });
