@@ -314,3 +314,165 @@ items:
             body:
               - "Bu yer tutucu sartlar gelecekteki e-ticaret demosu kullanimi icin hazirlandi."
               - "Gercek islem veya kullanici hesabi acilmadan once degistirilmelidir."
+
+  - id: "optiondrop"
+    slug: "optiondrop"
+    status: "MVP"
+    updated: "2026"
+    technologies: ["Flutter", "Dart", "Android", "shared_preferences", "Offline-first"]
+    screenshots:
+      - src: "/assets/images/projects/optiondrop/home.jpeg"
+        alt:
+          en: "OptionDrop home screen with recent decision list"
+          tr: "Son karar listesini gosteren OptionDrop ana ekrani"
+        caption:
+          en: "Home screen with a saved option list and quick access to decision tools."
+          tr: "Kaydedilmis secenek listesi ve karar araclarina hizli erisim sunan ana ekran."
+      - src: "/assets/images/projects/optiondrop/list-editor.jpeg"
+        alt:
+          en: "OptionDrop list editor with dinner options"
+          tr: "Aksam yemegi seceneklerini gosteren OptionDrop liste duzenleyicisi"
+        caption:
+          en: "Create and edit reusable lists with at least two options."
+          tr: "En az iki secenekle tekrar kullanilabilir listeler olusturma ve duzenleme."
+      - src: "/assets/images/projects/optiondrop/picker-ready.jpeg"
+        alt:
+          en: "OptionDrop random picker ready to select from a list"
+          tr: "Listeden secim yapmaya hazir OptionDrop rastgele secici ekrani"
+        caption:
+          en: "The picker presents the available options before a random decision."
+          tr: "Secici, rastgele karardan once kullanilabilir secenekleri sunar."
+      - src: "/assets/images/projects/optiondrop/picker-result.jpeg"
+        alt:
+          en: "OptionDrop random picker showing a selected result"
+          tr: "Secilen sonucu gosteren OptionDrop rastgele secici ekrani"
+        caption:
+          en: "A clear result state lets the user pick again or edit the list."
+          tr: "Net sonuc durumu, tekrar secme veya listeyi duzenleme secenegi sunar."
+      - src: "/assets/images/projects/optiondrop/quick-tools-idle.jpeg"
+        alt:
+          en: "OptionDrop quick tools for coin flip and dice roll"
+          tr: "Yazi-tura ve zar atma icin OptionDrop hizli araclari"
+        caption:
+          en: "Quick tools work without creating an option list."
+          tr: "Hizli araclar, secenek listesi olusturmadan calisir."
+      - src: "/assets/images/projects/optiondrop/quick-tools-results.jpeg"
+        alt:
+          en: "OptionDrop quick tools showing coin flip and dice results"
+          tr: "Yazi-tura ve zar sonuclarini gosteren OptionDrop hizli araclari"
+        caption:
+          en: "Coin flip and dice tools display the most recent random result."
+          tr: "Yazi-tura ve zar araclari son rastgele sonucu gosterir."
+      - src: "/assets/images/projects/optiondrop/quick-tools-number.jpeg"
+        alt:
+          en: "OptionDrop random number and yes or no tools"
+          tr: "Rastgele sayi ve evet hayir araclarini gosteren OptionDrop ekrani"
+        caption:
+          en: "Random-number and yes-or-no tools cover fast standalone decisions."
+          tr: "Rastgele sayi ve evet-hayir araclari hizli tekil kararlar icin kullanilir."
+      - src: "/assets/images/projects/optiondrop/history.jpeg"
+        alt:
+          en: "OptionDrop local selection history"
+          tr: "OptionDrop yerel secim gecmisi"
+        caption:
+          en: "Recent selections are saved locally on the device."
+          tr: "Son secimler cihazda yerel olarak saklanir."
+      - src: "/assets/images/projects/optiondrop/settings.jpeg"
+        alt:
+          en: "OptionDrop settings with theme and privacy controls"
+          tr: "Tema ve gizlilik kontrollerini gosteren OptionDrop ayarlari"
+        caption:
+          en: "Settings include light, dark, and system themes alongside local-data controls."
+          tr: "Ayarlarda yerel veri kontrollerinin yaninda acik, koyu ve sistem temalari bulunur."
+    links:
+      - type: "github"
+        url: "https://github.com/FerhatACAR/OptionDrop"
+        placeholder: false
+        external: true
+      - type: "live"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "privacy"
+        route: "privacy-policy"
+        placeholder: false
+        internal: true
+      - type: "terms"
+        route: "terms"
+        placeholder: false
+        internal: true
+      - type: "support"
+        url: ""
+        placeholder: true
+        external: true
+    content:
+      en:
+        title: "OptionDrop"
+        type: "Mobile app MVP"
+        summary: "An offline Flutter app that makes everyday decisions faster with custom option lists and simple random tools."
+        long_description: "OptionDrop helps people move past small everyday decisions without creating an account or sending data to a server. Users can save their own option lists, make a random selection, and use built-in coin flip, dice, random number, and yes/no tools whenever a list is unnecessary."
+        problem: "Small decisions can create unnecessary friction, while lightweight utility apps often introduce accounts, advertising, tracking, or network dependencies that the task does not need."
+        role: "Designed and built the Flutter MVP, including local persistence, decision flows, reusable tools, settings, and privacy-first product boundaries."
+        decisions:
+          - "Kept the app fully offline with no backend, accounts, analytics, advertising, or device permissions."
+          - "Stored lists, theme preferences, and selection history locally with shared_preferences."
+          - "Separated list management, random pickers, quick tools, history, and settings into focused application areas."
+        outcome: "A focused Android-ready tools MVP for fast, explainable decisions with a low-risk Google Play closed-testing scope."
+        features:
+          - "Create, edit, and delete personal option lists"
+          - "Pick randomly from lists containing at least two options"
+          - "Save selection results to on-device history"
+          - "Use coin flip, dice, random number, and yes/no quick tools"
+          - "Choose light, dark, or system theme"
+        learnings:
+          - "A small utility app can feel trustworthy when its data boundaries are explicit and its core flow works without a network connection."
+        future_improvements:
+          - "Add optional list backup and restore while preserving the local-first privacy model."
+          - "Publish the closed-test build and connect its Google Play listing when available."
+        legal:
+          privacy:
+            title: "Privacy Policy"
+            body:
+              - "OptionDrop does not collect, transmit, sell, or share personal data. It does not use accounts, analytics SDKs, advertising SDKs, Firebase, a backend API, or push notifications."
+              - "Option lists, theme preferences, and selection history are stored only on the user's device through local app storage. Removing the app or clearing its storage may remove this information."
+              - "The app does not request access to the camera, microphone, location, contacts, or advertising identifier."
+          terms:
+            title: "Terms of Use"
+            body:
+              - "OptionDrop is provided as a simple offline decision-support tool. Random selections and quick-tool results are for convenience and entertainment and should not be used as professional, legal, medical, financial, or safety advice."
+              - "Users are responsible for the option lists they create and for decisions made using the app. The application is provided without a guarantee of uninterrupted availability or fitness for a particular purpose."
+      tr:
+        title: "OptionDrop"
+        type: "Mobil uygulama MVP"
+        summary: "Gunluk kucuk kararlari, kisisel secenek listeleri ve pratik rastgele araclarla hizlandiran offline Flutter uygulamasi."
+        long_description: "OptionDrop, hesap olusturmadan veya veriyi bir sunucuya gondermeden gunluk karar vermeyi kolaylastirir. Kullanici kendi secenek listelerini kaydedebilir, bu listelerden rastgele secim yapabilir ya da liste gerektirmeyen durumlarda yazi-tura, zar, rastgele sayi ve evet/hayir araclarini kullanabilir."
+        problem: "Kucuk kararlar gereksiz surtmeye yol acabilir; buna karsin hafif arac uygulamalari bile cogu zaman hesap, reklam, takip veya ag bagimliligi ekler."
+        role: "Flutter MVP'sini; yerel veri saklama, karar akislari, tekrar kullanilabilir araclar, ayarlar ve gizlilik odakli urun sinirlariyla tasarlama ve gelistirme."
+        decisions:
+          - "Uygulama backend, hesap, analiz, reklam ve cihaz izni olmadan tamamen offline tutuldu."
+          - "Liste, tema tercihi ve secim gecmisi shared_preferences ile yalnizca cihazda saklandi."
+          - "Liste yonetimi, rastgele secim, hizli araclar, gecmis ve ayarlar odakli uygulama alanlarina ayrildi."
+        outcome: "Hizli ve aciklanabilir kararlar icin, Google Play closed testing kapsaminda dusuk riskli Android hazirlikli bir Tools MVP'si."
+        features:
+          - "Kisisel secenek listeleri olusturma, duzenleme ve silme"
+          - "En az iki secenekli listelerden rastgele secim yapma"
+          - "Secim sonuclarini cihazdaki gecmise kaydetme"
+          - "Yazi-tura, zar, rastgele sayi ve evet/hayir hizli araclari"
+          - "Acik, koyu ve sistem tema destegi"
+        learnings:
+          - "Veri sinirlari acik oldugunda ve temel akis internetsiz calistiginda kucuk bir arac uygulamasi daha guvenilir hissedebilir."
+        future_improvements:
+          - "Yerel-oncelikli gizlilik modelini koruyarak istege bagli liste yedekleme ve geri yukleme eklemek."
+          - "Closed test surumunu yayinlamak ve kullanilabilir oldugunda Google Play sayfasini baglamak."
+        legal:
+          privacy:
+            title: "Gizlilik Politikasi"
+            body:
+              - "OptionDrop kisisel veri toplamaz, iletmez, satmaz veya paylasmaz. Uygulama hesap, analiz SDK'si, reklam SDK'si, Firebase, backend API ya da push notification kullanmaz."
+              - "Secenek listeleri, tema tercihleri ve secim gecmisi yalnizca yerel uygulama depolamasi ile kullanicinin cihazinda tutulur. Uygulamanin silinmesi veya uygulama verilerinin temizlenmesi bu bilgileri silebilir."
+              - "Uygulama kamera, mikrofon, konum, rehber veya reklam kimligi erisimi istemez."
+          terms:
+            title: "Kullanim Sartlari"
+            body:
+              - "OptionDrop basit bir offline karar destek araci olarak sunulur. Rastgele secimler ve hizli arac sonuclari kolaylik ve eglence amaclidir; profesyonel, hukuki, tibbi, finansal veya guvenlik tavsiyesi olarak kullanilmamalidir."
+              - "Kullanicilar olusturduklari secenek listelerinden ve uygulama ile verdikleri kararlardan sorumludur. Uygulama kesintisiz erisim veya belirli bir amaca uygunluk garantisi olmadan sunulur."

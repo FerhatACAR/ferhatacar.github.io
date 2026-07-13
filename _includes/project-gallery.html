@@ -18,11 +18,30 @@
     </div>
     <div class="gallery-track" tabindex="0">
       {% for screenshot in screenshots %}
+        {% assign screenshot_alt = screenshot.alt[lang] | default: screenshot.alt.en %}
+        {% assign screenshot_caption = screenshot.caption[lang] | default: screenshot.caption.en %}
         <figure class="gallery-item">
-          <img src="{{ screenshot.src | relative_url }}" alt="{{ screenshot.alt[lang] | default: screenshot.alt.en }}" loading="lazy">
-          <figcaption>{{ screenshot.caption[lang] | default: screenshot.caption.en }}</figcaption>
+          <button class="gallery-media" type="button" data-gallery-open aria-label="{{ nav.labels.open_image }}: {{ screenshot_alt }}">
+            <img src="{{ screenshot.src | relative_url }}" alt="{{ screenshot_alt }}" loading="lazy">
+          </button>
+          <figcaption>{{ screenshot_caption }}</figcaption>
         </figure>
       {% endfor %}
     </div>
+
+    <dialog class="gallery-lightbox" data-gallery-dialog aria-labelledby="gallery-lightbox-caption-{{ project.slug }}">
+      <div class="gallery-lightbox-panel">
+        <div class="gallery-lightbox-toolbar">
+          <span class="gallery-lightbox-counter" data-gallery-counter aria-live="polite"></span>
+          <button class="gallery-lightbox-close" type="button" data-gallery-close aria-label="{{ nav.labels.close_image }}">&times;</button>
+        </div>
+        <div class="gallery-lightbox-stage">
+          <button class="gallery-lightbox-nav gallery-lightbox-previous" type="button" data-lightbox-prev aria-label="{{ nav.labels.previous_image }}">&lsaquo;</button>
+          <img data-gallery-lightbox-image alt="">
+          <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" data-lightbox-next aria-label="{{ nav.labels.next_image }}">&rsaquo;</button>
+        </div>
+        <p id="gallery-lightbox-caption-{{ project.slug }}" class="gallery-lightbox-caption" data-gallery-lightbox-caption aria-live="polite"></p>
+      </div>
+    </dialog>
   </div>
 </section>
