@@ -31,25 +31,28 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": {{ profile.name | jsonify }},
-  "jobTitle": {{ profile.role | jsonify }},
+  "jobTitle": {{ profile.job_title | default: profile.role | jsonify }},
   "email": {{ profile.email | prepend: "mailto:" | jsonify }},
-  "url": {{ site.url | jsonify }},
+  "url": {{ site.url | append: "/" | jsonify }},
   "image": {{ profile.photo | absolute_url | jsonify }},
   "address": {
     "@type": "PostalAddress",
     "addressCountry": {{ profile.location | jsonify }}
   },
-  "sameAs": {{ site.social.links | jsonify }}
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ site.title | jsonify }},
-  "url": {{ site.url | jsonify }},
-  "inLanguage": {{ lang | jsonify }},
-  "description": {{ site.description | jsonify }}
+  "sameAs": {{ site.social.links | jsonify }},
+  "knowsAbout": [
+    "Software Engineering",
+    ".NET",
+    "C#",
+    "Python",
+    "Flutter",
+    "Artificial Intelligence",
+    "AI Agents",
+    "Model Context Protocol",
+    "Backend Development",
+    "Industrial Software",
+    "Automation"
+  ]
 }
 </script>
 {% endif %}

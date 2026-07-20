@@ -1,8 +1,8 @@
-title: Ferhat Acar
+title: "Ferhat Acar"
 email: acar_ferhat@outlook.com
 description: >-
-  Ferhat Acar is a backend and full-stack software engineer focused on .NET,
-  API design, databases, React, and maintainable engineering practices.
+  Ferhat Acar is a Software Engineer and AI Developer specializing in .NET,
+  C#, Python, AI agents, MCP integrations, backend systems, automation, and industrial software.
 baseurl: ""
 url: "https://ferhatacar.github.io"
 lang: en
@@ -21,6 +21,7 @@ social:
   name: Ferhat Acar
   links:
     - https://github.com/FerhatACAR
+    - https://dev.to/ferhatacar
 
 plugins:
   - jekyll-feed
