@@ -1,5 +1,6 @@
 en:
   name: "Ferhat Acar"
+  job_title: "Software Engineer and AI Developer"
   role: "Full-Stack Software Engineer with Strong Backend / .NET Depth"
   short_role: "Computer Engineer"
   location: "Turkey"
@@ -7,8 +8,8 @@ en:
   photo: "/assets/images/profile-placeholder.png"
   photo_alt: "Ferhat Acar professional portrait placeholder"
   cv_pdf: ""
-  hero_title: "I build reliable .NET backends, polished full-stack products, and practical AI developer workflows."
-  hero_summary: "Full-stack software engineer with strong backend/.NET depth, focused on API design, databases, React, and maintainable systems. I am also actively developing expertise in LLM-powered tooling, MCP, and agentic developer workflows."
+  hero_title: "Ferhat Acar — Software Engineer & AI Developer"
+  hero_summary: "Ferhat Acar is a software engineer focused on reliable .NET backend systems, full-stack applications, AI developer workflows, MCP integrations, automation, and industrial software. His work combines API design, databases, React, and maintainable engineering practices."
   profile_summary: "I approach software as an engineering system: clear boundaries, readable code, useful abstractions, and delivery habits that keep products maintainable after launch. My core strength is backend and API development with .NET, while my current growth track includes AI application development, developer tooling, and structured automation."
   contact_summary: "Open to backend, full-stack, and AI-enabled product engineering conversations."
   availability: "Available for software engineering roles, product collaboration, and technical consulting."
@@ -40,6 +41,7 @@ en:
       url: "https://dev.to/ferhatacar"
 tr:
   name: "Ferhat Acar"
+  job_title: "Yazılım Mühendisi ve AI Geliştiricisi"
   role: "Backend / .NET Derinliği Güçlü Full-Stack Yazılım Mühendisi"
   short_role: "Bilgisayar Mühendisi"
   location: "Türkiye"
