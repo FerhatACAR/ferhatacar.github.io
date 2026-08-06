@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "LINQ'i Anlamak: Language-Integrated Query için Kapsamlı Rehber"
 description: "C# içinde LINQ'in filtreleme, projection, sıralama, grouping, join ve deferred execution mantığını pratik örneklerle anlatan kapsamlı giriş yazısı."
 date: 2023-07-08 11:55:00 +0300

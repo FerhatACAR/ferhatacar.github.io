@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "C# Struct ile Kompleks PLC Verisini Daha Hızlı ve Akıllı Okuma (S7.NET Advanced)"
 description: "Siemens S7-1500 sistemlerinde S7.NET, C# struct, bellek hizalama ve toplu okuma-yazma yaklaşımıyla yüksek performanslı veri erişimi rehberi."
 date: 2025-10-28 12:10:00 +0300

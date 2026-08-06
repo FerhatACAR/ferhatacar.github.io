@@ -6,12 +6,14 @@ description: >-
 baseurl: ""
 url: "https://ferhatacar.github.io"
 lang: en
+locale: en_US
 timezone: Europe/Istanbul
 
 author:
   name: Ferhat Acar
   email: acar_ferhat@outlook.com
   twitter: PltFerhatA
+  url: https://ferhatacar.github.io/
 
 twitter:
   username: PltFerhatA
@@ -35,6 +37,10 @@ defaults:
       path: ""
     values:
       image: /assets/images/og-image.png
+  - scope:
+      path: "tr"
+    values:
+      locale: tr_TR
 
 exclude:
   - .sass-cache/

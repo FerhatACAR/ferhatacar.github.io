@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "JavaScript'te Ramda.js ile Fonksiyonel Programlama Paradigmasını Keşfetmek"
 description: "Ramda.js üzerinden immutability, pure function, currying, composition ve higher-order function kavramlarıyla JavaScript'te fonksiyonel programlamaya giriş."
 date: 2023-07-08 12:05:00 +0300

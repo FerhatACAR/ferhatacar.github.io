@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "LINQ'i Diğer Veri Sorgulama Yöntemleriyle Karşılaştırmak"
 description: "LINQ, SQL, Entity Framework ve raw ADO.NET yaklaşımlarını üretkenlik, performans, tip güvenliği ve kontrol açısından karşılaştıran pratik değerlendirme."
 date: 2024-10-26 12:00:00 +0300

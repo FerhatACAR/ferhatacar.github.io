@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "LINQ Sorgularında Yaygın Hatalar ve Kaçınma Yolları"
 description: "Deferred execution, projection, null yönetimi, grouping ve veritabanı performansı ekseninde en sık görülen LINQ hataları ve pratik çözümleri."
 date: 2024-11-12 12:00:00 +0300
