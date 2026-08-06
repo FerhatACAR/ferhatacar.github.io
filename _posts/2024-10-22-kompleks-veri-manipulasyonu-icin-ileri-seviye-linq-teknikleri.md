@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "Kompleks Veri Manipülasyonu için İleri Seviye LINQ Teknikleri"
 description: "Deferred execution, projection, join, grouping, paging, flattening ve custom aggregation gibi ileri seviye LINQ tekniklerini pratik örneklerle inceleyin."
 date: 2024-10-22 12:00:00 +0300

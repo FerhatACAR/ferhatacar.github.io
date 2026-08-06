@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "PL/SQL'in Gücünü Açığa Çıkarmak: Verimli Veritabanı Geliştirme için En İyi Pratikler"
 description: "Procedure tasarımı, exception handling, performans, modülerlik ve sürdürülebilir veritabanı geliştirme alışkanlıkları için pratik PL/SQL rehberi."
 date: 2023-05-22 12:00:00 +0300

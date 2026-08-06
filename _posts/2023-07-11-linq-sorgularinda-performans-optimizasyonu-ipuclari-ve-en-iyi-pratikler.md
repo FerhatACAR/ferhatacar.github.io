@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "LINQ Sorgularında Performans Optimizasyonu: İpuçları ve En İyi Pratikler"
 description: "Execution davranışı, gereksiz enumeration, projection, filtreleme ve profiling odağında LINQ performansını iyileştirmek için pratik öneriler."
 date: 2023-07-11 12:00:00 +0300

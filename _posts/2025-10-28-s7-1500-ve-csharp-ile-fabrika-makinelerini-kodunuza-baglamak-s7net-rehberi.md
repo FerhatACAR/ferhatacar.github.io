@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "S7-1500 ve C# ile Fabrika Makinelerini Kodunuza Bağlamak: S7.NET Rehberi"
 description: "Siemens S7-1500 PLC verisini C# içinden S7.NET ile okumaya başlamak için TIA Portal ayarları, DB hazırlığı ve bağlantı temellerini anlatan adım adım rehber."
 date: 2025-10-28 11:55:00 +0300

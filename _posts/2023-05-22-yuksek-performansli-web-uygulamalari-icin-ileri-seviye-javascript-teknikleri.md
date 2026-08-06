@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "Yüksek Performanslı Web Uygulamaları için İleri Seviye JavaScript Teknikleri"
 description: "Asenkron programlama, closure, event delegation, debounce, throttle ve modüler tasarım ile daha hızlı ve daha dayanıklı frontend akışları kurma rehberi."
 date: 2023-05-22 11:50:00 +0300

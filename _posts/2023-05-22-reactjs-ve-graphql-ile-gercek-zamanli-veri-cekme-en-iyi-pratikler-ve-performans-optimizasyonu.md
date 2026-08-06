@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: tr
+locale: tr_TR
 title: "React.js ve GraphQL ile Gerçek Zamanlı Veri Çekme: En İyi Pratikler ve Performans Optimizasyonu"
 description: "Subscription, cache, state tasarımı, batching ve performans iyileştirme teknikleriyle React ve GraphQL veri akışlarını daha verimli kurma rehberi."
 date: 2023-05-22 12:10:00 +0300
