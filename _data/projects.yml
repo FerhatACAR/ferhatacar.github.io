@@ -15,6 +15,213 @@ fallback_screenshots:
       tr: "Akis onizleme yer tutucusu."
 
 items:
+  - id: "photoswipe-cleaner"
+    slug: "photoswipe-cleaner"
+    status: "Frozen V1"
+    updated: "2026"
+    technologies: ["Flutter", "Dart", "Android", "MediaStore", "Riverpod", "sqflite"]
+    screenshots:
+      - src: "/assets/images/projects/photoswipe-cleaner/app-icon.png"
+        alt:
+          en: "PhotoSwipe Cleaner app icon with stacked photo cards and a swipe arrow"
+          tr: "Ust uste foto kartlari ve kaydirma oku olan PhotoSwipe Cleaner uygulama ikonu"
+        caption:
+          en: "Graphic-only launcher icon. No Phase 5 claims."
+          tr: "Yalnizca grafik iceren baslatici ikonu. Phase 5 iddiasi yok."
+      - src: "/assets/images/projects/photoswipe-cleaner/home.png"
+        alt:
+          en: "PhotoSwipe Cleaner Home screen with Camera Roll Score and 5-Minute Cleanup"
+          tr: "Camera Roll Score ve 5 dakikalik temizlik gosteren PhotoSwipe Cleaner ana ekrani"
+        caption:
+          en: "Home shows Camera Roll Score, library counts, and a 5-Minute Cleanup start. Capture from frozen V1 device QA (debug build)."
+          tr: "Ana ekran Camera Roll Score, kitaplik sayilari ve 5 dakikalik temizlik baslatmayi gosterir. Goruntu, donmus V1 cihaz QA kaydidir (debug surumu)."
+      - src: "/assets/images/projects/photoswipe-cleaner/clean.png"
+        alt:
+          en: "PhotoSwipe Cleaner Clean tab with Five-Minute Cleanup and free session types"
+          tr: "Five-Minute Cleanup ve ucretsiz oturum turlerini gosteren PhotoSwipe Cleaner Clean sekmesi"
+        caption:
+          en: "Free sessions cover all photos, screenshots, screen recordings, large videos, and month-by-month cleanup. Similar, blurry, and best-shot tools are not in V1."
+          tr: "Ucretsiz oturumlar tum fotograflar, ekran goruntuleri, ekran kayitlari, buyuk videolar ve ay bazli temizligi kapsar. Benzer, bulanik ve en iyi kare araclari V1'de yoktur."
+      - src: "/assets/images/projects/photoswipe-cleaner/session-intro.png"
+        alt:
+          en: "Five-Minute Cleanup intro explaining that swipe only stages deletion"
+          tr: "Kaydirmanin yalnizca silme icin kuyruga aldigini aciklayan Five-Minute Cleanup girisi"
+        caption:
+          en: "Session intro copy is explicit: swipe stages an item. Nothing is removed until review and confirm."
+          tr: "Oturum giris metni aciktir: kaydirma ogeleri kuyruga alir. Inceleme ve onay olmadan hicbir sey silinmez."
+      - src: "/assets/images/projects/photoswipe-cleaner/swipe.png"
+        alt:
+          en: "Swipe screen with Delete, Protect, and Keep actions on disposable QA media"
+          tr: "Tek kullanimlik QA medyasi uzerinde Delete, Protect ve Keep aksiyonlarini gosteren kaydirma ekrani"
+        caption:
+          en: "Keep, stage Delete, or Protect. The card shown is disposable QA media, not a personal photo."
+          tr: "Keep, Delete kuyrugu veya Protect. Gorunen kart kisisel fotograf degil, tek kullanimlik QA medyasidir."
+      - src: "/assets/images/projects/photoswipe-cleaner/review.png"
+        alt:
+          en: "Review queue before deletion with restore controls and no similar-photo labels"
+          tr: "Silmeden once inceleme kuyrugu; geri alma kontrolleri var, benzer fotograf etiketi yok"
+        caption:
+          en: "Review-before-delete queue. V1 does not label items as duplicate or similar photos."
+          tr: "Silmeden once inceleme kuyrugu. V1 ogeleri duplicate veya similar photo olarak etiketlemez."
+      - src: "/assets/images/projects/photoswipe-cleaner/confirm.png"
+        alt:
+          en: "In-app confirm screen before Android delete confirmation"
+          tr: "Android silme onayindan onceki uygulama ici onay ekrani"
+        caption:
+          en: "The in-app confirm step warns that Android will ask again. Canceling the OS sheet removes nothing."
+          tr: "Uygulama ici onay, Android'in tekrar soracagini belirtir. OS penceresini iptal etmek hicbir seyi silmez."
+      - src: "/assets/images/projects/photoswipe-cleaner/os-delete.png"
+        alt:
+          en: "Android system sheet asking permission to delete a staged photo"
+          tr: "Kuyruga alinan bir fotografin silinmesi icin izin isteyen Android sistem penceresi"
+        caption:
+          en: "On API 30+, deletion uses MediaStore.createDeleteRequest. The system sheet is the final gate."
+          tr: "API 30+ silme islemi MediaStore.createDeleteRequest kullanir. Son kapi sistem penceresidir."
+      - src: "/assets/images/projects/photoswipe-cleaner/progress.png"
+        alt:
+          en: "Progress tab with reclaimed storage, Camera Roll Score, and cleanup counts"
+          tr: "Geri kazanilan depolama, Camera Roll Score ve temizlik sayilarini gosteren Progress sekmesi"
+        caption:
+          en: "Progress tracks reclaimed storage, score, reviewed items, and removals after confirmed deletes."
+          tr: "Progress, onayli silmelerden sonra geri kazanilan depolama, skor, incelenen ogeler ve silinenleri takip eder."
+      - src: "/assets/images/projects/photoswipe-cleaner/share-card.png"
+        alt:
+          en: "Statistics-only share card stating that no photos are included"
+          tr: "Fotograf icermedigini belirten yalnizca istatistik paylasim karti"
+        caption:
+          en: "Share card is statistics only. No photos, filenames, or thumbnails are included."
+          tr: "Paylasim karti yalnizca istatistiktir. Fotograf, dosya adi veya kucuk resim icermez."
+      - src: "/assets/images/projects/photoswipe-cleaner/settings.png"
+        alt:
+          en: "Settings screen with restore purchases, privacy policy, and terms links"
+          tr: "Satin almalari geri yukleme, gizlilik politikasi ve sartlar baglantilarini gosteren ayarlar ekrani"
+        caption:
+          en: "Settings expose restore, subscription management, privacy, terms, and feedback. Dark mode follows the system theme."
+          tr: "Ayarlarda geri yukleme, abonelik yonetimi, gizlilik, sartlar ve geri bildirim vardir. Koyu tema sistem temasini izler."
+    links:
+      - type: "github"
+        url: "https://github.com/FerhatACAR/PhotoSwipe-Cleaner"
+        placeholder: false
+        external: true
+      - type: "live"
+        url: ""
+        placeholder: true
+        external: true
+      - type: "privacy"
+        route: "privacy-policy"
+        placeholder: false
+        internal: true
+      - type: "terms"
+        route: "terms"
+        placeholder: false
+        internal: true
+      - type: "support"
+        url: "mailto:3amfreak@gmail.com"
+        placeholder: false
+        external: true
+    content:
+      en:
+        title: "PhotoSwipe Cleaner"
+        type: "Android app"
+        summary: "A local camera-roll cleaner that stages Keep, Delete, and Protect decisions in short sessions, then asks Android to confirm before anything is removed."
+        long_description: "PhotoSwipe Cleaner is a Flutter Android app for reviewing photos and videos in 5-minute sessions. Cleanup stays on the device. Swipe only stages items. A review queue comes next, and Android must confirm before MediaStore removal. Camera Roll Score is a simple cleanliness indicator, not a security diagnosis. V1 does not detect similar-looking photos, blurry photos, or best shots."
+        problem: "Camera rolls grow until cleanup feels overwhelming, while many gallery tools either delete too automatically, upload media, or advertise similarity and blur detection that this V1 does not ship."
+        role: "Designed and built the frozen Android V1: local MediaStore scanning, swipe staging, review-before-delete, Camera Roll Score, ads and Play Billing boundaries, and physical-device deletion QA."
+        decisions:
+          - "Kept media on-device. PhotoSwipe Cleaner code does not upload camera-roll bytes."
+          - "Made swipe a staging action. Confirmed deletion goes through review, then Android's delete request on API 30+."
+          - "Left Phase 5 flags off: similar photos, blur, best-shot, video compression, and interstitial ads are not in V1."
+          - "Kept free manual cleanup useful. Pro is optional annual or lifetime, with no weekly plan and no first-launch paywall."
+        outcome: "V1 is code-frozen and accepted on a TECNO KM4n running Android 15. Remaining work is release configuration: Play listing, production AdMob, signing, and these hosted legal pages."
+        features:
+          - "Five-Minute Cleanup sessions with Keep, stage Delete, and Protect"
+          - "Review-before-delete, then Android confirmation; cancel removes nothing"
+          - "Screenshot, screen-recording, large-video, and month-by-month cleanup"
+          - "Camera Roll Score as a motivational cleanliness indicator"
+          - "Statistics-only share card with no photos included"
+          - "Local MediaStore scan and deletion reconciliation, including trashed-item filtering"
+          - "System dark mode and optional Pro tools: exact-duplicate review, advanced filters, custom sessions, and cleanup history"
+        learnings:
+          - "A cleaner is only trustworthy when OS cancel cannot look like a successful delete."
+          - "Accessible-library counts must ignore trashed MediaStore rows after a confirmed removal."
+          - "Store graphics can overclaim post-launch ideas; frozen V1 copy has to stay narrower than the roadmap."
+        future_improvements:
+          - "Finish Play Console, production AdMob, and signing so a public listing can ship."
+          - "Add extra OEM and older-API deletion coverage before production trust on those devices."
+          - "Keep similar-photo, blur, and best-shot work in a later Phase 5 release rather than implying they exist now."
+        legal:
+          privacy:
+            title: "Privacy Policy"
+            body:
+              - "Last updated: 15 September 2026. This privacy policy applies to PhotoSwipe Cleaner for Android, package com.threeamfreak.photoswipecleaner. Contact: 3amfreak@gmail.com."
+              - "PhotoSwipe Cleaner is a local camera-roll cleaner. Core cleanup works on the device. The app requests photo and video access so it can list items already on the device, show thumbnails, classify obvious screenshots and screen recordings using on-device metadata, stage items you choose, and ask Android to delete or trash those items after you confirm."
+              - "PhotoSwipe Cleaner does not upload photo or video bytes to PhotoSwipe Cleaner-controlled servers. It does not sell photo contents. Original files are not copied into the app database. Cached metadata such as size, dates, category flags, and protected IDs stays in local app storage. Removing the app or clearing its storage may remove this cache."
+              - "Scanning, Camera Roll Score, exact-size duplicate grouping for Pro, and session statistics happen on the device. Exact duplicate confirmation hashes only size-collision candidates locally. V1 does not perform perceptual similar-photo, blur, or best-shot analysis."
+              - "Free users may see Google AdMob banner ads after their first completed cleanup, and only on Home, Progress, and Result. Ads are not shown on swipe, review, onboarding, permission, confirmation, or paywall screens. AdMob is a third-party SDK and may process a device advertising identifier according to Google's policies. PhotoSwipe Cleaner Pro removes ads."
+              - "Subscriptions and lifetime purchases are processed by Google Play. PhotoSwipe Cleaner does not collect payment card details. Product IDs in the app are pro_annual and pro_lifetime. There is no weekly plan."
+              - "Firebase Analytics and Crashlytics are not compiled into the current V1 build. If they are enabled later, events must remain aggregate product diagnostics and must not include photo or video bytes, thumbnails, filenames, URIs or file paths, photo hashes, MediaStore IDs, EXIF GPS or camera metadata, or album names."
+              - "The app uses Internet access for ads and Play Billing when those services are configured. It does not use MANAGE_EXTERNAL_STORAGE. Share actions are user-initiated and, in V1, share a statistics-only card with no photos."
+              - "This policy describes the frozen V1 product. Production AdMob, Play Billing products, and optional Firebase were not configured at the time these pages were published. Behavior of Google SDKs follows Google's own policies when those SDKs run."
+          terms:
+            title: "Terms of Use"
+            body:
+              - "Last updated: 15 September 2026. These terms apply to PhotoSwipe Cleaner for Android, package com.threeamfreak.photoswipecleaner. Support: 3amfreak@gmail.com."
+              - "PhotoSwipe Cleaner is provided as a local camera-roll cleanup tool. Swipe Keep, Delete, and Protect decisions only stage items. Nothing is deleted automatically. Removal happens only after you review the queue and, on Android 11 and newer, confirm Android's system delete request. Canceling that request leaves files in place."
+              - "You are responsible for the items you choose to stage or remove. Camera Roll Score is a motivational cleanliness indicator, not a device-health, security, or data-loss diagnosis. Cleanup results should not be treated as professional, legal, medical, financial, or archival advice."
+              - "After a confirmed delete, Android or an OEM gallery may keep a copy in system Trash. PhotoSwipe Cleaner treats trashed items as outside the accessible library and does not offer in-app undelete from Trash. Thumbnail, screenshot, and screen-recording classification uses on-device metadata and may miss OEM folders that do not follow common naming."
+              - "Optional PhotoSwipe Cleaner Pro is sold through Google Play as an annual subscription or a one-time lifetime purchase. Play's refund, cancellation, and subscription rules apply. Missing Play or ads configuration does not unlock Pro and does not block free manual cleanup."
+              - "The application is provided without a guarantee of uninterrupted availability or fitness for a particular purpose. V1 phone UI is portrait-only. Similar-photo, blur, best-shot, and video-compression features are not part of this release."
+      tr:
+        title: "PhotoSwipe Cleaner"
+        type: "Android uygulamasi"
+        summary: "Kisa oturumlarda Keep, Delete ve Protect kararlarini kuyruga alan, bir seyi silmeden once Android onayini isteyen yerel kamera rulosu temizleyici."
+        long_description: "PhotoSwipe Cleaner, fotograflari ve videolari 5 dakikalik oturumlarda incelemek icin yazilmis bir Flutter Android uygulamasidir. Temizlik cihazda kalir. Kaydirma yalnizca kuyruga alma isidir. Sonra inceleme kuyrugu gelir ve MediaStore silmesi icin Android onayi gerekir. Camera Roll Score basit bir temizlik gostergesidir, guvenlik tanisi degildir. V1 benzer gorunumlu fotograflari, bulanik fotograflari veya en iyi kareleri tespit etmez."
+        problem: "Kamera rulolari, temizlik yorucu hale gelene kadar buyur. Bircok galeri araci ise ya cok otomatik siler, ya medyayi yukler, ya da bu V1'de olmayan benzerlik ve bulaniklik iddialariyla pazarlanir."
+        role: "Donmus Android V1'i tasarlama ve gelistirme: yerel MediaStore tarama, kaydirarak kuyruga alma, silmeden once inceleme, Camera Roll Score, reklam ve Play Billing sinirlari, fiziksel cihazda silme QA'si."
+        decisions:
+          - "Medya cihazda tutuldu. PhotoSwipe Cleaner kodu kamera rulosu baytlarini yuklemez."
+          - "Kaydirma bir kuyruga alma eylemi yapildi. Onayli silme, incelemeden sonra API 30+'da Android silme istegiyle ilerler."
+          - "Phase 5 bayraklari kapali birakildi: benzer fotograflar, bulaniklik, en iyi kare, video sikistirma ve interstitial reklamlar V1'de yoktur."
+          - "Ucretsiz manuel temizlik faydali tutuldu. Pro istege bagli yillik veya omur boyu plandir; haftalik plan ve ilk acilista paywall yoktur."
+        outcome: "V1 kod olarak donduruldu ve Android 15 calistiran TECNO KM4n uzerinde kabul edildi. Kalan is, Play listesi, uretim AdMob, imzalama ve bu barindirilan yasal sayfalar gibi yayin yapilandirmasidir."
+        features:
+          - "Keep, Delete kuyrugu ve Protect ile Five-Minute Cleanup oturumlari"
+          - "Silmeden once inceleme, ardindan Android onayi; iptal hicbir seyi silmez"
+          - "Ekran goruntusu, ekran kaydi, buyuk video ve ay bazli temizlik"
+          - "Motivasyon amacli Camera Roll Score gostergesi"
+          - "Fotograf icermeyen yalnizca istatistik paylasim karti"
+          - "Yerel MediaStore tarama ve copteki ogeleri filtreleyen silme uzlastirmasi"
+          - "Sistem koyu temasi ve istege bagli Pro araclari: tam kopya inceleme, gelismis filtreler, ozel oturumlar ve temizlik gecmisi"
+        learnings:
+          - "Bir temizleyici, OS iptali basarili silme gibi gorunmediginde guvenilir olur."
+          - "Erisilebilir kitaplik sayilari, onayli silmeden sonra copteki MediaStore satirlarini yoksaymalidir."
+          - "Magaza gorselleri sonraki faz fikirlerini abartabilir; donmus V1 metni yol haritasindan daha dar kalmalidir."
+        future_improvements:
+          - "Herkese acik bir liste icin Play Console, uretim AdMob ve imzalamayi tamamlamak."
+          - "Uretim guveninden once ek OEM ve daha eski API silme kapsamini artirmak."
+          - "Benzer fotograf, bulaniklik ve en iyi kare isini simdiki urunde ima etmeden sonraki Phase 5 surumune birakmak."
+        legal:
+          privacy:
+            title: "Gizlilik Politikasi"
+            body:
+              - "Son guncelleme: 15 Eylul 2026. Bu gizlilik politikasi Android icin PhotoSwipe Cleaner uygulamasina aittir, paket kimligi com.threeamfreak.photoswipecleaner. Iletisim: 3amfreak@gmail.com."
+              - "PhotoSwipe Cleaner yerel bir kamera rulosu temizleyicisidir. Temel temizlik cihazda calisir. Uygulama, cihazda zaten bulunan ogeleri listelemek, kucuk resimleri gostermek, belirgin ekran goruntulerini ve ekran kayitlarini cihazdaki metadata ile siniflandirmak, sectiginiz ogeleri kuyruga almak ve onayinizdan sonra Android'den silme veya cop kutusu islemi istemek icin fotograf ve video erisimi talep eder."
+              - "PhotoSwipe Cleaner, fotograf veya video baytlarini PhotoSwipe Cleaner kontrolundeki sunuculara yuklemez. Fotograf icerigini satmaz. Orijinal dosyalar uygulama veritabanina kopyalanmaz. Boyut, tarih, kategori bayraklari ve korunan kimlikler gibi onbellek metadata'si yerel uygulama depolamasinda kalir. Uygulamanin silinmesi veya depolamasinin temizlenmesi bu onbellegi silebilir."
+              - "Tarama, Camera Roll Score, Pro icin tam boyut kopya gruplama ve oturum istatistikleri cihazda gerceklesir. Tam kopya dogrulamasi yalnizca boyut carpismasi adaylarini yerelde hash'ler. V1 algisal benzer fotograf, bulaniklik veya en iyi kare analizi yapmaz."
+              - "Ucretsiz kullanicilar, ilk tamamlanan temizlikten sonra ve yalnizca Home, Progress ve Result ekranlarinda Google AdMob banner reklami gorebilir. Reklamlar kaydirma, inceleme, onboarding, izin, onay veya paywall ekranlarinda gosterilmez. AdMob ucuncu taraf bir SDK'dir ve Google politikalarina gore reklam kimligi isleyebilir. PhotoSwipe Cleaner Pro reklamlari kaldirir."
+              - "Abonelikler ve omur boyu satin almalar Google Play tarafindan islenir. PhotoSwipe Cleaner kart bilgisi toplamaz. Uygulamadaki urun kimlikleri pro_annual ve pro_lifetime'dir. Haftalik plan yoktur."
+              - "Firebase Analytics ve Crashlytics mevcut V1 derlemesine dahil edilmemistir. Daha sonra acilirsa olaylar toplu urun tanilari olarak kalmali; fotograf veya video baytlari, kucuk resimler, dosya adlari, URI veya dosya yollari, fotograf hash'leri, MediaStore kimlikleri, EXIF GPS veya kamera metadata'si ya da album adlari icermemelidir."
+              - "Uygulama, bu servisler yapilandirildiginda reklamlar ve Play Billing icin Internet erisimi kullanir. MANAGE_EXTERNAL_STORAGE kullanmaz. Paylasma eylemleri kullanici baslatmalidir ve V1'de fotograf icermeyen bir istatistik karti paylasilir."
+              - "Bu politika donmus V1 urununu anlatir. Bu sayfalar yayinlandiginda uretim AdMob, Play Billing urunleri ve istege bagli Firebase yapilandirilmamisti. Google SDK'lari calistiginda Google'in kendi politikalari gecerlidir."
+          terms:
+            title: "Kullanim Sartlari"
+            body:
+              - "Son guncelleme: 15 Eylul 2026. Bu sartlar Android icin PhotoSwipe Cleaner uygulamasina aittir, paket kimligi com.threeamfreak.photoswipecleaner. Destek: 3amfreak@gmail.com."
+              - "PhotoSwipe Cleaner yerel bir kamera rulosu temizleme araci olarak sunulur. Keep, Delete ve Protect kaydirmalari yalnizca kuyruga alma isidir. Hicbir sey otomatik silinmez. Kaldirma yalnizca kuyrugu inceledikten ve Android 11 ve sonrasinda sistem silme istegini onayladiktan sonra olur. Bu istegi iptal etmek dosyalari yerinde birakir."
+              - "Kuyruga aldiginiz veya sildiginiz ogelerden siz sorumlusunuz. Camera Roll Score motivasyon amacli bir temizlik gostergesidir; cihaz sagligi, guvenlik veya veri kaybi tanisi degildir. Temizlik sonuclari profesyonel, hukuki, tibbi, finansal veya arsiv tavsiyesi olarak kullanilmamalidir."
+              - "Onayli bir silmeden sonra Android veya OEM galerisi sistem cop kutusunda bir kopya tutabilir. PhotoSwipe Cleaner copteki ogeleri erisilebilir kitapligin disinda sayar ve uygulama icinden cop kutusundan geri getirme sunmaz. Kucuk resim, ekran goruntusu ve ekran kaydi siniflandirmasi cihazdaki metadata'ya dayanir ve yaygin adlandirmayi izlemeyen OEM klasorlerini kacirabilir."
+              - "Istege bagli PhotoSwipe Cleaner Pro, Google Play uzerinden yillik abonelik veya tek seferlik omur boyu satin alma olarak satilir. Play'in iade, iptal ve abonelik kurallari gecerlidir. Eksik Play veya reklam yapilandirmasi Pro acmaz ve ucretsiz manuel temizligi engellemez."
+              - "Uygulama, kesintisiz erisim veya belirli bir amaca uygunluk garantisi olmadan sunulur. V1 telefon arayuzu yalnizca dikeydir. Benzer fotograf, bulaniklik, en iyi kare ve video sikistirma ozellikleri bu surumun parcasi degildir."
   - id: "portfolio-platform"
     slug: "portfolio-platform"
     status: "Live"
