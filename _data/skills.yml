@@ -5,6 +5,8 @@ en:
     items: ["SQL", "LINQ", "Entity Framework", "ADO.NET", "PL/SQL", "Oracle"]
   - group: "Frontend"
     items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component-driven thinking"]
+  - group: "Mobile"
+    items: ["Flutter", "Dart", "Android", "MediaStore", "Local-first product design"]
   - group: "Realtime and Integration"
     items: ["GraphQL", "Realtime data flows", "XML", "API contracts", "Data modeling", "Performance tuning"]
   - group: "Industrial and Device Integration"
@@ -20,6 +22,8 @@ tr:
     items: ["SQL", "LINQ", "Entity Framework", "ADO.NET", "PL/SQL", "Oracle"]
   - group: "Frontend"
     items: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Component odaklı düşünme"]
+  - group: "Mobil"
+    items: ["Flutter", "Dart", "Android", "MediaStore", "Yerel oncelikli urun tasarimi"]
   - group: "Gerçek Zamanlı ve Entegrasyon"
     items: ["GraphQL", "Gerçek zamanlı veri akışları", "XML", "API sözleşmeleri", "Veri modelleme", "Performans iyileştirme"]
   - group: "Endüstriyel ve Cihaz Entegrasyonu"
