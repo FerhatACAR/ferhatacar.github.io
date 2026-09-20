@@ -47,6 +47,7 @@ layout: default
     </div>
     <div class="project-list">
       {% for project in projects %}
+        {% if project.featured %}
         {% assign project_content = project.content[lang] %}
         {% if lang == "tr" %}
           {% capture project_url %}/tr/projects/{{ project.slug }}/{% endcapture %}
@@ -97,6 +98,7 @@ layout: default
             </div>
           </div>
         </article>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

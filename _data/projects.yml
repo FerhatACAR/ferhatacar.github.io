@@ -17,6 +17,7 @@ fallback_screenshots:
 items:
   - id: "photoswipe-cleaner"
     slug: "photoswipe-cleaner"
+    featured: true
     status: "Frozen V1"
     updated: "2026"
     technologies: ["Flutter", "Dart", "Android", "MediaStore", "Riverpod", "sqflite"]
@@ -162,6 +163,12 @@ items:
               - "Firebase Analytics and Crashlytics are not compiled into the current V1 build. If they are enabled later, events must remain aggregate product diagnostics and must not include photo or video bytes, thumbnails, filenames, URIs or file paths, photo hashes, MediaStore IDs, EXIF GPS or camera metadata, or album names."
               - "The app uses Internet access for ads and Play Billing when those services are configured. It does not use MANAGE_EXTERNAL_STORAGE. Share actions are user-initiated and, in V1, share a statistics-only card with no photos."
               - "This policy describes the frozen V1 product. Production AdMob, Play Billing products, and optional Firebase were not configured at the time these pages were published. Behavior of Google SDKs follows Google's own policies when those SDKs run."
+              - "Children's Privacy: PhotoSwipe Cleaner is not directed to children, and we do not knowingly collect personal information from children. Contact us if you believe a child has provided information."
+              - "User choices and rights: You can change Android permissions, limit ad personalization where Google provides that control, and choose not to use sharing, ads, or optional purchases. Depending on where you live, applicable law may provide additional rights; contact us to ask about a request."
+              - "Retention and deletion: The app keeps its local cache and settings while the app or its storage remains installed. Clear app storage or uninstall to remove local data; Android, Google Play, or an ad provider may retain records under their own policies."
+              - "Third-party information: AdMob and Google Play/Google Payments follow Google's policies, including the Google AdMob Privacy Policy (https://policies.google.com/technologies/ads) and Google Play Terms (https://play.google.com/about/play-terms/). Firebase Analytics and Crashlytics are not compiled into current V1; if enabled later, see Google's Firebase privacy information (https://firebase.google.com/support/privacy)."
+              - "Changes to this Privacy Policy: We may update this policy when the app, services, or legal requirements change. The updated version will show a new date on this page."
+              - "Contact: Questions or privacy requests can be sent to 3amfreak@gmail.com."
           terms:
             title: "Terms of Use"
             body:
@@ -170,6 +177,15 @@ items:
               - "You are responsible for the items you choose to stage or remove. Camera Roll Score is a motivational cleanliness indicator, not a device-health, security, or data-loss diagnosis. Cleanup results should not be treated as professional, legal, medical, financial, or archival advice."
               - "After a confirmed delete, Android or an OEM gallery may keep a copy in system Trash. PhotoSwipe Cleaner treats trashed items as outside the accessible library and does not offer in-app undelete from Trash. Thumbnail, screenshot, and screen-recording classification uses on-device metadata and may miss OEM folders that do not follow common naming."
               - "Optional PhotoSwipe Cleaner Pro is sold through Google Play as an annual subscription or a one-time lifetime purchase. Play's refund, cancellation, and subscription rules apply. Missing Play or ads configuration does not unlock Pro and does not block free manual cleanup."
+              - "Purchases and subscriptions: Google Play handles billing, receipts, refunds, renewal, and cancellation. You can manage or cancel a subscription in Google Play; cancellation does not by itself create a refund."
+              - "Restore Purchases: The app may restore eligible Google Play purchases on a compatible device and account. Restore does not bypass Google Play purchase checks."
+              - "Acceptable Use: Use the app lawfully and only with media you are authorized to access or remove. Do not interfere with the app, misuse permissions, bypass purchase checks, or violate another person's rights."
+              - "Intellectual Property: The app, code, branding, text, and original assets belong to the developer of PhotoSwipe Cleaner or its licensors. These terms grant a limited, revocable right to use the app as intended."
+              - "Disclaimer of Warranties: The app is provided as available, without warranties that it will be uninterrupted, error-free, secure, or fit for a particular purpose. You remain responsible for backups and reviewing every removal request."
+              - "Limitation of Liability: To the extent permitted by applicable law, the developer of PhotoSwipe Cleaner is not liable for indirect, incidental, special, or consequential loss, or loss arising from media selection, Android or OEM behavior, service interruption, or system Trash handling."
+              - "Changes to the App or Terms: Features, availability, pricing, and these terms may change as the app evolves. The current version and update date will be posted on this page."
+              - "Termination: You may stop using the app and uninstall it at any time. Access may end if you breach these terms or if the app is withdrawn. Surviving sections remain effective."
+              - "Contact: Questions about these terms can be sent to 3amfreak@gmail.com."
               - "The application is provided without a guarantee of uninterrupted availability or fitness for a particular purpose. V1 phone UI is portrait-only. Similar-photo, blur, best-shot, and video-compression features are not part of this release."
       tr:
         title: "PhotoSwipe Cleaner"
@@ -212,6 +228,12 @@ items:
               - "Abonelikler ve omur boyu satin almalar Google Play tarafindan islenir. PhotoSwipe Cleaner kart bilgisi toplamaz. Uygulamadaki urun kimlikleri pro_annual ve pro_lifetime'dir. Haftalik plan yoktur."
               - "Firebase Analytics ve Crashlytics mevcut V1 derlemesine dahil edilmemistir. Daha sonra acilirsa olaylar toplu urun tanilari olarak kalmali; fotograf veya video baytlari, kucuk resimler, dosya adlari, URI veya dosya yollari, fotograf hash'leri, MediaStore kimlikleri, EXIF GPS veya kamera metadata'si ya da album adlari icermemelidir."
               - "Uygulama, bu servisler yapilandirildiginda reklamlar ve Play Billing icin Internet erisimi kullanir. MANAGE_EXTERNAL_STORAGE kullanmaz. Paylasma eylemleri kullanici baslatmalidir ve V1'de fotograf icermeyen bir istatistik karti paylasilir."
+              - "Cocuklarin Gizliligi: PhotoSwipe Cleaner cocuklara yonelik degildir ve cocuklardan bilerek kisisel bilgi toplamiyoruz. Bir cocugun bilgi verdigini dusunuyorsaniz bize ulasin."
+              - "Kullanici secimleri ve haklari: Android izinlerini degistirebilir, Google'in sundugu yerlerde reklam kisisellestirmesini sinirlayabilir ve paylasim, reklam veya istege bagli satin almalari kullanmamayi tercih edebilirsiniz. Bulundugunuz yere gore ek yasal haklariniz olabilir; talep icin bize ulasin."
+              - "Saklama ve silme: Uygulama yerel onbellegi ve ayarlari cihazda kaldigi surece tutar. Uygulama depolamasini temizleyerek veya uygulamayi kaldirarak yerel verileri silebilirsiniz; Android, Google Play veya reklam saglayicisi kendi politikasina gore kayit tutabilir."
+              - "Ucuncu taraflar: AdMob ve Google Play/Google Payments Google politikalarina tabidir: AdMob Gizlilik Politikasi (https://policies.google.com/technologies/ads) ve Google Play Sartlari (https://play.google.com/about/play-terms/). Firebase Analytics ve Crashlytics mevcut V1'e derlenmemistir; daha sonra etkinlestirilirse Firebase gizlilik bilgileri (https://firebase.google.com/support/privacy) uygulanir."
+              - "Bu Gizlilik Politikasindaki degisiklikler: Uygulama, servisler veya yasal gereklilikler degistiginde politika guncellenebilir. Guncel surum bu sayfada yeni tarih ile gosterilir."
+              - "Iletisim: Sorularinizi veya gizlilik taleplerinizi 3amfreak@gmail.com adresine iletebilirsiniz."
               - "Bu politika donmus V1 urununu anlatir. Bu sayfalar yayinlandiginda uretim AdMob, Play Billing urunleri ve istege bagli Firebase yapilandirilmamisti. Google SDK'lari calistiginda Google'in kendi politikalari gecerlidir."
           terms:
             title: "Kullanim Sartlari"
@@ -221,9 +243,19 @@ items:
               - "Kuyruga aldiginiz veya sildiginiz ogelerden siz sorumlusunuz. Camera Roll Score motivasyon amacli bir temizlik gostergesidir; cihaz sagligi, guvenlik veya veri kaybi tanisi degildir. Temizlik sonuclari profesyonel, hukuki, tibbi, finansal veya arsiv tavsiyesi olarak kullanilmamalidir."
               - "Onayli bir silmeden sonra Android veya OEM galerisi sistem cop kutusunda bir kopya tutabilir. PhotoSwipe Cleaner copteki ogeleri erisilebilir kitapligin disinda sayar ve uygulama icinden cop kutusundan geri getirme sunmaz. Kucuk resim, ekran goruntusu ve ekran kaydi siniflandirmasi cihazdaki metadata'ya dayanir ve yaygin adlandirmayi izlemeyen OEM klasorlerini kacirabilir."
               - "Istege bagli PhotoSwipe Cleaner Pro, Google Play uzerinden yillik abonelik veya tek seferlik omur boyu satin alma olarak satilir. Play'in iade, iptal ve abonelik kurallari gecerlidir. Eksik Play veya reklam yapilandirmasi Pro acmaz ve ucretsiz manuel temizligi engellemez."
+              - "Satin almalar ve abonelikler: Faturalandirma, makbuzlar, iadeler, yenileme ve iptal Google Play tarafindan yonetilir. Aboneligi Google Play'den yonetebilir veya iptal edebilirsiniz; iptal tek basina iade saglamaz."
+              - "Satin almalari geri yukleme: Uygulama, uyumlu cihaz ve hesapta uygun Google Play satin almalarini geri yukleyebilir. Geri yukleme Google Play kontrollerini atlamaz."
+              - "Kabul edilebilir kullanim: Uygulamayi yasalara uygun ve yalnizca erisme veya silme yetkiniz olan medyayla kullanin. Uygulamaya mudahale etmeyin, izinleri kotuye kullanmayin, satin alma kontrollerini asmayin veya baskalarinin haklarini ihlal etmeyin."
+              - "Fikri mulkiyet: Uygulama, kod, marka, metin ve ozgun varliklar PhotoSwipe Cleaner gelistiricisine veya lisans verenlerine aittir. Bu sartlar amaca uygun kullanim icin sinirli ve geri alinabilir bir hak verir."
+              - "Garantilerin reddi: Uygulama kesintisiz, hatasiz, guvenli veya belirli amaca uygun olacagina dair garanti olmadan sunulur. Yedeklerden ve her silme istegini incelemekten siz sorumlusunuz."
+              - "Sorumlulugun sinirlandirilmasi: Uygulanabilir hukukun izin verdigi olcude, PhotoSwipe Cleaner gelistiricisi dolayli zararlardan veya medya secimi, Android/OEM davranisi, servis kesintisi ya da sistem cop kutusundan kaynaklanan kayiplardan sorumlu degildir."
+              - "Uygulama veya Sartlardaki degisiklikler: Ozellikler, erisilebilirlik, fiyatlar ve bu sartlar degisebilir. Guncel surum ve tarih bu sayfada yayinlanir."
+              - "Fesih: Uygulamayi kullanmayi birakabilir ve kaldirabilirsiniz. Sart ihlali veya uygulamanin geri cekilmesi halinde erisim sona erebilir. Devam etmesi gereken bolumler yururlukte kalir."
+              - "Iletisim: Bu sartlarla ilgili sorularinizi 3amfreak@gmail.com adresine iletebilirsiniz."
               - "Uygulama, kesintisiz erisim veya belirli bir amaca uygunluk garantisi olmadan sunulur. V1 telefon arayuzu yalnizca dikeydir. Benzer fotograf, bulaniklik, en iyi kare ve video sikistirma ozellikleri bu surumun parcasi degildir."
   - id: "portfolio-platform"
     slug: "portfolio-platform"
+    featured: true
     status: "Live"
     updated: "2026"
     technologies: ["Jekyll", "Liquid", "HTML", "CSS", "SEO"]
@@ -331,6 +363,7 @@ items:
 
   - id: "task-manager-api"
     slug: "task-manager-api"
+    featured: false
     status: "MVP"
     updated: "2026"
     technologies: [".NET", "ASP.NET Core", "Entity Framework", "SQL", "REST"]
@@ -424,6 +457,7 @@ items:
 
   - id: "e-commerce-flow"
     slug: "e-commerce-flow"
+    featured: true
     status: "Concept"
     updated: "2026"
     technologies: ["React", "Node.js", "MongoDB", "API Design", "UX Flow"]
@@ -524,6 +558,7 @@ items:
 
   - id: "optiondrop"
     slug: "optiondrop"
+    featured: true
     status: "MVP"
     updated: "2026"
     technologies: ["Flutter", "Dart", "Android", "shared_preferences", "Offline-first"]
